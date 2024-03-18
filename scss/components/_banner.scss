@@ -1,0 +1,103 @@
+.banner-wrapper{
+    height: 380px;
+    .container-fluid{
+        height: 100%;
+    }
+    .hunnys-bunny-banner{
+        height: 100%;
+        background: #F0F0F0;
+        border-radius: 20px;
+        overflow: hidden;
+        .slick-list, .slick-track {
+            height: 100%;
+        }
+        .slick-dots{
+            bottom: 30px;
+            right: 40px;
+            width: fit-content;
+            li{
+                margin: 1px;
+                width: 15px;
+                height: 15px;
+                button{
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+            li button:before{
+                font-size: 18px;
+            }
+            li.slick-active button:before{
+                opacity: 1;
+                font-size: 26px;
+            }
+        }
+        .banner-item{
+            height: 100%;
+        }
+        .item1{
+            background: rgb(168,151,219);
+            background: linear-gradient(176deg, rgba(168,151,219,1) 0%, rgba(179,196,248,1) 100%);
+        }
+        .banner-content{
+            height: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 30px 0;
+            .content{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 10%;
+                .title{
+                    font-size: 22px;
+                    margin:0 0 10px;
+                    font-weight: 400;
+                }
+                .info-text{
+                    font-size: 18px;
+                    margin: 0 0 10px;
+                }
+            }
+            .banner-image{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    max-width: 220px;
+                }
+            }
+        }
+    }
+}
+
+@include mq($from: tablet) {
+    .banner-wrapper{
+        height: 450px;
+        .hunnys-bunny-banner{
+            border-radius: 30px;
+            .banner-content{
+                flex-direction: inherit;
+                padding: 0;
+                .content{
+                    width: 50%;
+                    .title{
+                        font-size: 28px;
+                    }
+                    .info-text{
+                        font-size: 20px;
+                    }
+                }
+                .banner-image{
+                    width: 50%;
+                    img{
+                        max-width: 370px;
+                    }
+                }
+            }
+        }
+    }
+}

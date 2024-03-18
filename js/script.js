@@ -1,0 +1,34 @@
+$(document).ready(function(){
+    $(".hamburger").click(function(){
+      $(this).toggleClass("is-active");
+      $('.navbar').toggleClass("active");
+      $('.main').toggleClass("small");
+      window.setTimeout(function(){
+        $('.navbar').toggleClass('vissible');
+      }, 400); //<-- Delay in milliseconds
+      window.setTimeout(function(){
+        $('.navbar').toggleClass('hide-vissible');
+      }, 200); //<-- Delay in milliseconds
+      window.setTimeout(function(){
+        $('.navbar').toggleClass('show-menu');
+      }, 800); //<-- Delay in milliseconds
+    });
+    $(".navbar .btn-close").click(function(){
+      $('.hamburger').removeClass("is-active");
+      $('.navbar').removeClass("active, vissible");
+    })
+    $(".top-bar .btn-close").click(function(){
+      $("body").removeClass("top-bar-active");
+      $('.top-bar').hide();
+    })
+
+    $('.hunnys-bunny-banner').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: true,
+        cssEase: 'linear',
+    });
+    
+  });

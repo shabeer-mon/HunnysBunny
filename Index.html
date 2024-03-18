@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hunnys Bunny</title>
+    <style>
+        @font-face {
+        font-family: 'hunnybunny-icon';
+        src:  url('fonts/hunnybunny-icon.eot');
+        src:  url('fonts/hunnybunny-icon.eot') format('embedded-opentype'),
+            url('fonts/hunnybunny-icon.ttf') format('truetype'),
+            url('fonts/hunnybunny-icon.woff') format('woff'),
+            url('fonts/hunnybunny-icon.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+        }
+
+        [class^="icon-"], [class*=" icon-"] {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'hunnybunny-icon' !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        }
+        .icon-close:before {
+        content: "\e907";
+        }
+        .icon-down:before {
+        content: "\e900";
+        }
+        .icon-up:before {
+        content: "\e901";
+        }
+        .icon-right:before {
+        content: "\e902";
+        }
+        .icon-left:before {
+        content: "\e903";
+        }
+        .icon-bag:before {
+        content: "\e904";
+        }
+        .icon-lens:before {
+        content: "\e905";
+        }
+        .icon-user:before {
+        content: "\e906";
+        }
+        
+
+    </style>
+</head>
+<body class="top-bar-active">
+    <div class="top-bar">
+        <p class="text">SIGN UP TO OUR EMAILS FOR <span class="offer">20%</span> OFF YOUR FIRST ORDER</p>
+        <span class="btn-close"><i class="icon-close"></i></span>
+    </div>
+    <div class="wrapper">
+        <nav class="navbar show-menu hide-vissible">
+            <div class="nav-block">
+                <div class="hamburger" id="hamburger-1">
+                    <div class="line-wrapper">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <span class="text">Menu</span>
+                    <span class="menu-close"></span>
+                </div>
+                <div class="menu-block">
+                    <menu class="menu-mini">
+                        <li><a href="#">
+                                <i class="icon-user"></i>
+                                <span class="text">Login</span>
+                            </a>
+                        </li>
+                        <li><a href="#"><i class="icon-lens"></i></a></li>
+                        <li><a href="#"><i class="icon-bag"></i></a></li>
+                    </menu>
+                </div>
+
+                
+            </div>
+            
+            <menu class="category-menu">
+                <li class="btn-close-block">
+                    <span class="btn-close"><i class="icon-close"></i></span>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="text">Woman</span>
+                        <i class="icon-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="text">Man</span>
+                        <i class="icon-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="text">Cloth</span>
+                        <i class="icon-right"></i>
+                    </a>
+                </li>
+            </menu>
+        </nav>
+        <main class="main">
+
+            <header class="main-header">
+                <div class="container-fluid text-right">
+                    <a href="#" class="navbar-brand">
+                        <img src="/images/logo.jpg" alt="logo"/>
+                    </a>
+                </div>
+               
+            </header>
+            
+            <section class="banner-wrapper">
+                <div class="container-fluid">
+                    <div class="hunnys-bunny-banner">
+                        <div class="banner-item item1">
+                            <div class="banner-content">
+                                <div class="content">
+                                    <h2 class="title">Spice up Your Life</h2>
+                                    <p class="info-text">Discover Pleasure Beyond Imagination!</p>
+                                    <div class="button-block">
+                                        <a class="btn btn-primary" href="#">Shop now</a>
+                                    </div>
+                                </div>
+                                <div class="banner-image">
+                                    <img src="images/11.png" alt="" />
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="banner-item item1">
+                            <div class="banner-content">
+                                <div class="content">
+                                    <h2 class="title">Spice up Your Life</h2>
+                                    <p class="info-text">Discover Pleasure Beyond Imagination!</p>
+                                    <div class="button-block">
+                                        <a class="btn btn-primary" href="#">Shop now</a>
+                                    </div>
+                                </div>
+                                <div class="banner-image">
+                                    <img src="images/11.png" alt="" />
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+               
+            </section>
+        </main>
+     
+        
+    </div>
+    
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
