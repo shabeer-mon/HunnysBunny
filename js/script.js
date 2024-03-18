@@ -30,5 +30,7 @@ $(document).ready(function(){
         autoplay: true,
         cssEase: 'linear',
     });
-    
+    $('.hunnys-bunny-banner').click(function(e){
+      e.currentTarget.classList.add('slick-current', 'slick-active','slick-center');
+  });
   });
