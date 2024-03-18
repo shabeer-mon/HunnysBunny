@@ -7,9 +7,9 @@ body{
    position: relative;
    height: 100%;
    font-family: "Open Sans", sans-serif;
-   &.top-bar-active{
-    padding-top:30px ;
-   }
+//    &.top-bar-active{
+//     padding-top:30px ;
+//    }
     .wrapper{
         display: flex;
         height: 100%;
@@ -30,8 +30,8 @@ body{
     font-size: 12px;
     text-transform: uppercase;
     padding: 7px 20px;
-    position: fixed;
-    top: 0;
+    // position: fixed;
+    // top: 0;
     z-index: 29;
     width: 100%;
 
