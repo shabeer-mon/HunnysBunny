@@ -1,7 +1,20 @@
 *{
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
+*:focus { 
+    outline: 0 !important;
+    box-shadow:none;
+  }
 body{
     margin: 0;
     color: $-primary;
+}
+
+input, textarea, button, select, a{
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus, a:visited, a:active{
+    outline: none;
 }

@@ -3,5 +3,18 @@
 .main-header{
     margin: 0;
     padding: 10px 0;
-    
+    text-align: center;
+    .navbar-brand{
+        img{
+            max-width: 200px;
+        }
+    }
+    @include mq($from: tablet) {
+        text-align: right;
+        .navbar-brand{
+            img{
+                max-width: 270px;
+            }
+        }
+    }
 }
