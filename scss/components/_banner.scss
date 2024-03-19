@@ -77,11 +77,11 @@
         display: flex;
         gap: 1rem;
         justify-content: space-between;
-        
+        width: 100%;
         flex-wrap: wrap;
         .infoBox{
             display: flex;
-            padding: 0 30px;
+            padding: 0 15px;
             .icon-wrpr{
                 width: 40px;
                 height: 40px;
@@ -137,3 +137,24 @@
         }
     }
 }
+
+@include mq($from: desktop) {
+    .offerInfo{
+        
+        .slick-list{
+            width: 100%; 
+        }
+        .slick-track{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            &::before, &::after{
+                display: none;
+            }
+        }
+        .infoBox{
+            width: fit-content !important;
+            padding: 0 30px;
+        }
+    }
+}   
