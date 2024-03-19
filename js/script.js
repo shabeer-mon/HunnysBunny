@@ -28,7 +28,29 @@ $(document).ready(function(){
         slidesToScroll: 1,
         dots: true,
         autoplay: true,
+        swipe:true,
         cssEase: 'linear',
+    });
+
+
+    
+    $('.offerInfo').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        autoplay: true,
+        cssEase: 'linear',
+        mobileFirst: true,
+        responsive: [
+          {
+            breakpoint: 980,
+            settings: {
+              settings: "unslick",
+              slidesToShow: 3,
+            }
+          },
+        ]
     });
     $('.hunnys-bunny-banner').click(function(e){
       e.currentTarget.classList.add('slick-current', 'slick-active','slick-center');
