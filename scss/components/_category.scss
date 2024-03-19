@@ -1,5 +1,5 @@
 .category{
-    padding: 100px 0;
+    padding: 60px 0 100px;
     .category-block{
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -40,13 +40,29 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                padding:0px 30px 30px;
+                padding:0px 15px 20px;
                 .title{
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: 700;
                     text-transform: uppercase;
                     color: $-white;
                     text-shadow: 0 0 16px rgba($-primary, .5);
+                }
+            }
+        }
+    }
+}
+
+@include mq($from: tablet) {
+    .category{
+        padding: 100px 0;
+        .category-block{
+            .category-item{
+                .content{
+                    padding:0px 30px 30px;
+                    .title{
+                        font-size: 16px;
+                    }
                 }
             }
         }
