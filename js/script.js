@@ -30,6 +30,7 @@ $(document).ready(function(){
         autoplay: true,
         swipe:true,
         cssEase: 'linear',
+        speed: 800,
     });
 
 
@@ -40,14 +41,18 @@ $(document).ready(function(){
         slidesToScroll: 1,
         dots: false,
         autoplay: true,
-        cssEase: 'linear',
         mobileFirst: true,
+        autoplaySpeed:5000,
+        fade: true,
+        cssEase: 'ease-in-out',
+        touchThreshold: 100,
         responsive: [
           {
             breakpoint: 980,
             settings: {
               settings: "unslick",
               slidesToShow: 3,
+              fade: false,
             }
           },
         ]

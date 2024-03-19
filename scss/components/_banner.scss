@@ -1,10 +1,10 @@
 .banner-wrapper{
-    height: 380px;
+    
     .container-fluid{
         height: 100%;
     }
     .hunnys-bunny-banner{
-        height: 100%;
+        height: 380px;
         background: #F0F0F0;
         border-radius: 20px;
         overflow: hidden;
@@ -112,8 +112,9 @@
 
 @include mq($from: tablet) {
     .banner-wrapper{
-        height: 450px;
+        
         .hunnys-bunny-banner{
+            height: 450px;
             border-radius: 30px;
             .banner-content{
                 flex-direction: inherit;
@@ -139,22 +140,30 @@
 }
 
 @include mq($from: desktop) {
-    .offerInfo{
+    .banner-wrapper {
+        .offerInfo{
         
-        .slick-list{
-            width: 100%; 
-        }
-        .slick-track{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            &::before, &::after{
-                display: none;
+            .slick-list{
+                width: 100%; 
+            }
+            .slick-track{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                &::before, &::after{
+                    display: none;
+                }
+            }
+            .infoBox{
+                width: fit-content !important;
+                padding: 0 30px;
             }
         }
-        .infoBox{
-            width: fit-content !important;
-            padding: 0 30px;
-        }
     }
+    
 }   
+
+
+
+
+  

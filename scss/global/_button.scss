@@ -1,6 +1,6 @@
 .btn{
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 13px;
     padding: 8px 22px;
     background: #ccc;
     display: inline-block;
@@ -11,6 +11,14 @@
         background: rgba($-primary, .8);
         &:hover{
             background: rgba($-primary, 1);
+        }
+    }
+    &-secondary{
+        background: rgba($-white, 1);
+        color: rgba($-primary, 1);
+        &:hover{
+            background: rgba($-primary, 1);
+            color: rgba($-white, 1);
         }
     }
 }
