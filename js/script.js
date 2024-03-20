@@ -57,7 +57,45 @@ $(document).ready(function(){
           },
         ]
     });
+
+
+    $('.prod-slider').slick({
+        infinite: false,
+        slidesToShow: 1.5,
+        slidesToScroll: 1,
+        dots: false,
+        autoplay: false,
+        swipe:true,
+        cssEase: 'linear',
+        mobileFirst: true,
+        speed:500,
+        responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2.5,
+            }
+          },
+          {
+            breakpoint: 980,
+            settings: {
+              slidesToShow: 3.5,
+            }
+          }
+        ]
+        
+    });
+
     $('.hunnys-bunny-banner').click(function(e){
       e.currentTarget.classList.add('slick-current', 'slick-active','slick-center');
   });
+  slider.slick(settings);
+  $(window).on("resize", function () {
+      if ($(window).width() > $breakpoint) {
+        return;
+      }
+      if (!slider.hasClass("slick-initialized")) {
+        return slider.slick(settings);
+      }
+    });
   });
