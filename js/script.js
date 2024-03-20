@@ -67,19 +67,13 @@ $(document).ready(function(){
         autoplay: false,
         swipe:true,
         cssEase: 'linear',
-        mobileFirst: true,
         speed:500,
+        mobileFirst:true,
         responsive: [
           {
-            breakpoint: 480,
+            breakpoint: 768,
             settings: {
-              slidesToShow: 2.5,
-            }
-          },
-          {
-            breakpoint: 980,
-            settings: {
-              slidesToShow: 3.5,
+              slidesToShow: 3.5
             }
           }
         ]
@@ -89,13 +83,4 @@ $(document).ready(function(){
     $('.hunnys-bunny-banner').click(function(e){
       e.currentTarget.classList.add('slick-current', 'slick-active','slick-center');
   });
-  slider.slick(settings);
-  $(window).on("resize", function () {
-      if ($(window).width() > $breakpoint) {
-        return;
-      }
-      if (!slider.hasClass("slick-initialized")) {
-        return slider.slick(settings);
-      }
-    });
   });
