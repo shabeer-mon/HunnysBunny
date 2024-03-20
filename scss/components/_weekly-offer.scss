@@ -1,6 +1,10 @@
 .weekly-offer{
     padding-bottom: 100px;
+    overflow: hidden;
     .container-fluid{
-        padding: 0;
+        @include mq($until: tablet) {
+            padding: 0;
+        }
+       
     }
 }

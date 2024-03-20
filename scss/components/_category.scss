@@ -31,6 +31,7 @@
             .img-box{
                 height: 100%;
                 img{
+                    transition: all 0.3s ease-in-out;
                     margin:0 auto;
                     display: block;
                     max-width: 100%;
@@ -50,6 +51,15 @@
                     text-transform: uppercase;
                     color: $-white;
                     text-shadow: 0 0 16px rgba($-primary, .5);
+                }
+            }
+            &:hover{
+                .inner-box{
+                    .img-box{
+                        img{
+                            transform: scale(1.1);
+                        }
+                    }
                 }
             }
         }
