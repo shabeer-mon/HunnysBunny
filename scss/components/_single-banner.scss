@@ -1,0 +1,89 @@
+.single-banner{
+    padding-bottom: 100px;
+    .single-banner-wrapper{
+        overflow: hidden;
+        border-radius: 15px;
+        position: relative;
+        min-height: 180px;
+    }
+    .content{
+        position: relative;
+        z-index: 1  ;
+        width: 100%;
+        height: 100%;
+        padding: 40px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       
+        .title{
+            font-size: 20px;
+            margin:0 0 10px;
+            text-shadow: 0 0 16px rgba(0,0,0,.5);
+        }
+        .info-text{
+            font-size: 14px;
+            margin: 0 0 20px;
+            text-shadow: 0 0 16px rgba(0,0,0,.5);
+        }
+        &.text-white{
+            color: $-white;
+        }
+    }
+    .img-box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba($-primary, .3);    
+            z-index: 1;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 0;
+        }
+        
+    }
+    .btn{
+        box-shadow: 0 3px 30px rgba($-white, .5);
+    }
+}
+
+.bg-purple{
+    background: #9F69BE;
+}
+
+
+@include mq($from: tablet) {
+    .single-banner{
+        padding-bottom: 100px;
+        .single-banner-wrapper{
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .content{
+            padding:80px  20px;
+            .title{
+                font-size: 28px;
+                font-weight: 400;
+            }
+            .info-text{
+                font-size: 20px;
+            }
+        }
+    }
+}
