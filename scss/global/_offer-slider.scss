@@ -1,9 +1,6 @@
 .prod-slider{
-    // .slick-list{
-    //     overflow: visible;
-    // }
     .prod-slider-item{
-        padding-right: 10px;
+        padding-left:20px;
         .inner-box{
             background: #F5F5F5;
             padding: 40px 20px 20px; 
@@ -54,9 +51,9 @@
 
 @include mq($from: tablet) {
     .prod-slider{
-        padding-left: 30px;
-        .prod-slider-item{
-            padding-right: 20px;
+        .slick-list{
+            overflow: visible;
         }
+        padding-left: 30px;
     }
 }
