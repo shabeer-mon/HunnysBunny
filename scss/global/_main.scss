@@ -8,9 +8,9 @@ body{
    height: 100%;
    font-family: "Open Sans", sans-serif;
    overflow-x: hidden !important;
-//    &.top-bar-active{
-//     padding-top:30px ;
-//    }
+   &.search-active{
+    overflow: hidden;
+   }
     .wrapper{
         display: flex;
         height: 100%;
@@ -23,6 +23,11 @@ body{
     @include mq($from: tablet) {
         padding: 0 30px;
     }
+}
+.container{
+    max-width: 1160px;
+    padding: 0 15px;
+    margin: auto;
 }
 .top-bar{
     background: $-primary;
