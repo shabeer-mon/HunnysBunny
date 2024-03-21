@@ -3,7 +3,7 @@
     .nav-block{
       width: calc(100% - 40px);
       height: 50px;
-      background: #F9F9F9;
+      background: rgb(249, 249, 249, .7);
       position: fixed;
       left: 20px;
       bottom: 20px;
@@ -13,6 +13,7 @@
       border-radius: 50px;
       z-index: 30;
       transition: all .3s ease-in-out;
+      backdrop-filter: blur(7px);
       .footer-on-screen &{
         opacity: 0;
         pointer-events: none;
@@ -189,6 +190,7 @@
         height: 100%;
         align-items: center;
         flex-direction: column;
+        backdrop-filter: blur(0px);
         .footer-on-screen &{
           opacity: 1;
           pointer-events: all;
