@@ -12,6 +12,11 @@
       box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
       border-radius: 50px;
       z-index: 30;
+      transition: all .3s ease-in-out;
+      .footer-on-screen &{
+        opacity: 0;
+        pointer-events: none;
+      }
     }
     .hamburger{
       height: 40px;
@@ -184,6 +189,10 @@
         height: 100%;
         align-items: center;
         flex-direction: column;
+        .footer-on-screen &{
+          opacity: 1;
+          pointer-events: all;
+        }
       }
       .hamburger{
         height: auto;

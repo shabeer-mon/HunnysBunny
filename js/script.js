@@ -29,6 +29,21 @@ $('.footer-tab .title').on('click', function() {
   $('.footer-menu ').not($(this).next('.footer-menu ')).slideUp();
 });
 
+$(window).scroll(function() {
+  var footer = $('footer');
+  var body = $('body');
+  var footerTop = footer.offset().top;
+  var windowHeight = $(window).height();
+  var scrollPosition = $(this).scrollTop();
+
+  // Check if footer is on the screen
+  if (footerTop < scrollPosition + windowHeight) {
+      body.addClass('footer-on-screen');
+  } else {
+      body.removeClass('footer-on-screen');
+  }
+});
+
 
 // FOOTER TAB END
     $('.hunnys-bunny-banner').slick({
