@@ -12,6 +12,8 @@
 /// @link https://github.com/sass-mq/sass-mq#seeing-the-currently-active-breakpoint Full documentation and examples
 $breakpoints: (
   mobile: 320px,
+  mobileLarge: 580px,
+  mobileHorizontal: 680px,
   tablet: 740px,
   desktop: 980px,
   wide: 1300px,

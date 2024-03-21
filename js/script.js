@@ -21,7 +21,16 @@ $(document).ready(function(){
       $("body").removeClass("top-bar-active");
       $('.top-bar').hide();
     })
+// FOOTER TAB
+$('.footer-tab .footer-menu').hide();
 
+$('.footer-tab .title').on('click', function() {
+  $(this).toggleClass('active').next('.footer-menu ').slideToggle();
+  $('.footer-menu ').not($(this).next('.footer-menu ')).slideUp();
+});
+
+
+// FOOTER TAB END
     $('.hunnys-bunny-banner').slick({
         infinite: true,
         slidesToShow: 1,

@@ -1,0 +1,17 @@
+.form-control{
+    background: #F5F5F5;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    display: block;
+    padding: 4px 12px;
+    min-height: 36px;
+    position: relative;
+    z-index: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    &:focus{
+        border-color: $-primary;
+    }
+}

@@ -92,7 +92,7 @@
           text-decoration: none;
           color: $-primary;
           i{
-            font-size: 14px;
+            font-size: 10px;
           }
           .text{
             font-size: 14px;
@@ -246,35 +246,6 @@
         background: transparent;
         .btn-close-block{
           display: none;
-        }
-        li{
-          .btn-close{
-            position: absolute;
-            right: 5px;
-            top: 5px;
-          }
-          a{
-            display: flex;
-            font-weight: 700;
-            height: 40px;
-            text-transform: uppercase;
-            align-items: center;
-            text-decoration: none;
-            color: $-primary;
-            i{
-              font-size: 14px;
-            }
-            .text{
-              font-size: 14px;
-              margin-right: auto;
-              border-bottom: 2px solid transparent;
-            }
-            &:hover{
-              .text{
-                border-color:rgba($-primary, 1) ;
-              }
-            }
-          }
         }
       }
       &.active{
