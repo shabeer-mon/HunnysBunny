@@ -1,11 +1,12 @@
 .prod-list{
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     .prod-list-item{
         padding:7px;
         .inner-box{
             background: #F5F5F5;
-            padding: 40px 20px 20px; 
+            
+            padding: 30px 10px 15px;
             position: relative;
             border-radius: 15px;
             overflow: hidden;
@@ -21,8 +22,8 @@
             }
             .offer-text{
                 position: absolute;
-                top: 20px;
-                left: 20px;
+                top: 10px;
+                left: 10px;
                 font-size: 12px;
             }
             .content{
@@ -58,5 +59,19 @@
                 }
             }
         }
+    }
+}
+
+
+@include mq($from: tablet) {
+    .prod-list{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .prod-list .prod-list-item .inner-box{
+        padding: 40px 20px 20px; 
+    }
+    .prod-list .prod-list-item .inner-box .offer-text{
+        top: 20px;
+        left: 20px;
     }
 }

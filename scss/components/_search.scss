@@ -22,6 +22,7 @@
     }
     .input-block{
         position: relative;
+        margin-bottom: 60px;
         .form-control{
             width: 100%;
             max-width: 100%;
@@ -59,7 +60,7 @@
         letter-spacing: 2px;
     }
     .search-wrapper{
-        margin-bottom: 100px;
+        margin-bottom: 60px;
     }
     .prod-list{
         .prod-list-item{
@@ -68,6 +69,31 @@
             }
         }
     }
+    .filter-section {
+        
+        display: none;
+        }
+        .no-data{
+            display: none;
+        }
+        .prod-list .prod-list-item .inner-box .content .price-block{
+            display: flex;
+            text-align: left;
+            align-items: center;
+            .price{
+                margin-right: 5px;
+            }
+        }
 }
 
 
+@include mq($from: tablet) {
+    .search{
+        .input-block{
+            margin-bottom: 100px;
+        }
+        .search-wrapper{
+            margin-bottom: 100px;
+        }
+    }
+}

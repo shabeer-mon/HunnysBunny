@@ -121,14 +121,25 @@ $(window).scroll(function() {
 
 
 
-  $('#searchInput').on('input', function() {
-    var searchTerm = $(this).val().toLowerCase();
-    $('#itemList li').each(function() {
+  $('#filterInput').on('input', function() {
+    var filterInputValue = $(this).val().toLowerCase();
+    
+    // Show filter section if filter input is not empty
+    if (filterInputValue.trim() !== '') {
+      $('#filterSection').slideDown();
+    } else {
+      $('#filterSection').slideUp();
+    }
+    
+    // Filter items based on input value
+    $('#filterList .prod-list-item').each(function() {
       var text = $(this).text().toLowerCase();
-      if (text.includes(searchTerm)) {
+      if (text.indexOf(filterInputValue) !== -1) {
         $(this).show();
+        $('.no-data').hide();
       } else {
         $(this).hide();
+        $('.no-data').show();
       }
     });
   });

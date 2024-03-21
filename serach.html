@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filter Section</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    
+    .filter-section {
+    display: none;
+    }
+
+.filter-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.filter-list li {
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+</style>
+</head>
+<body>
+  <input type="text" id="filterInput" placeholder="Type here to filter...">
+  
+  <div id="filterSection" class="filter-section">
+    <h2>Filter Section</h2>
+    <ul id="filterList" class="filter-list">
+      <li>Filter Item 1</li>
+      <li>Filter Item 2</li>
+      <li>Filter Item 3</li>
+      <li>Filter Item 4</li>
+    </ul>
+  </div>
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+<script>
+    $(document).ready(function() {
+  $('#filterInput').on('input', function() {
+    var filterInputValue = $(this).val().toLowerCase();
+    
+    // Show filter section if filter input is not empty
+    if (filterInputValue.trim() !== '') {
+      $('#filterSection').slideDown();
+    } else {
+      $('#filterSection').slideUp();
+    }
+    
+    // Filter items based on input value
+    $('#filterList li').each(function() {
+      var text = $(this).text().toLowerCase();
+      if (text.indexOf(filterInputValue) !== -1) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
+});
+
+</script>
+</body>
+</html>
