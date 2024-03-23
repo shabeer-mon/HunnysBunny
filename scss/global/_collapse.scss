@@ -1,6 +1,8 @@
-.tab-wrapper{
-    .footer-tab{
-        .title{
+.collapse-wrapper{
+    .collapse-item{
+        .collapse-title{
+            margin: 0;
+            padding: 15px 0;
             cursor: pointer;
             .plusminus {
                 position: relative;
@@ -29,20 +31,11 @@
                 }
                 
             }
-            &.active {
-                .plusminus {
-                    &:before {
-                        transform: translatey(-50%) rotate(-90deg);
-                        opacity: 0;
-                    }
-                    &:after {
-                        transform: translatey(-50%) rotate(0);
-                    }
-                }
-                
-            }
+            
         }
-        .footer-menu{
+        .collapse-panel{
+            display: none;
+            margin: 0;
             list-style: none;
             padding: 0;
             li{
@@ -58,6 +51,28 @@
                         font-size: 16px;
                     }
                 }
+            }
+        }
+        &.active {
+            .collapse-title{
+                .plusminus {
+                    &:before {
+                        transform: translatey(-50%) rotate(-90deg);
+                        opacity: 0;
+                    }
+                    &:after {
+                        transform: translatey(-50%) rotate(0);
+                    }
+                }
+            }
+        }
+    }
+    &.style-1{
+        .collapse-item{
+            .collapse-title{
+                border-bottom: 1px solid rgba($-primary, .1);
+                display: flex;
+                justify-content: space-between;
             }
         }
     }

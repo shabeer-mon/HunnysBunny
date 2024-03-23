@@ -1,0 +1,40 @@
+.drawer{
+    .drawer-block{
+        position: fixed;
+        top: 0;
+        right:0px;
+        width: 360px;
+        height: 100%;
+        background: $-white;
+        z-index: 36;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(360px);
+        transition: all .5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+
+        .drawer-header{
+            display: flex;
+            padding: 15px;
+            align-items: center;
+            .title{
+                margin: 0;
+            }
+        }
+        .drawer-inner{
+            padding: 20px;
+            height: 100%;
+            overflow: auto;
+        }
+    }
+    &.active{
+        .drawer-block{
+            transform: translateX(0px);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+}

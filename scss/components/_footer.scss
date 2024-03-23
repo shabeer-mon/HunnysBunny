@@ -25,7 +25,7 @@
         font-size: 14px;
         font-weight: 100;
     }
-    .tab-wrapper{
+    .collapse-wrapper{
         display: flex;
         justify-content: flex-start;
         flex: 1;
@@ -76,15 +76,16 @@
 }
 @include mq($from: mobileHorizontal) {
     .footer{
-        .tab-wrapper{
+        .collapse-wrapper{
             max-width: 50%;
             flex-direction: inherit;
             justify-content: space-between;
             margin-bottom: 0;
         }
-        .footer-tab{
-            .title{
+        .collapse-item{
+            .collapse-title{
                 cursor: default;
+                pointer-events: none;
                 .plusminus{
                     display: none;
                 }

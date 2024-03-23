@@ -1,11 +1,11 @@
 .prod-list{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    
     .prod-list-item{
         padding:7px;
         .inner-box{
             background: #F5F5F5;
-            
             padding: 30px 10px 15px;
             position: relative;
             border-radius: 15px;
@@ -35,6 +35,9 @@
                 .button-block{
                     display: flex;
                     justify-content: space-between;
+                    .btn{
+                        padding: 7px 15px;
+                    }
                 }
                 .price-block{
                     text-align: right;
@@ -50,6 +53,7 @@
                 }
             }
         }
+       
         &:hover{
             .inner-box{
                 .img-box{
@@ -60,12 +64,19 @@
             }
         }
     }
+    &.prod-slider{
+        display: block !important;
+        .prod-list-item{
+            padding: 0 0 0 20px;
+            
+        }
+    }
 }
 
 
 @include mq($from: tablet) {
     .prod-list{
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .prod-list .prod-list-item .inner-box{
         padding: 40px 20px 20px; 
@@ -73,5 +84,52 @@
     .prod-list .prod-list-item .inner-box .offer-text{
         top: 20px;
         left: 20px;
+    }
+    .prod-list .prod-list-item .inner-box .content .button-block{
+        .btn{
+            padding: 8px 22px
+        }
+    }
+   
+}
+@include mq($from: desktop) {
+    .prod-list{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+@include mq($until: mobileLarge) {
+    .prod-list:not(.prod-slider) .prod-list-item .inner-box .content .title{
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .prod-list:not(.prod-slider) .prod-list-item .inner-box .content .button-block{
+        flex-direction: column-reverse;
+        align-items: center;
+        .btn{
+            width: 100%;
+        }
+    }
+    .prod-list:not(.prod-slider) .prod-list-item .inner-box .content .price-block{
+        text-align: center;
+        display: flex;
+        margin-bottom: 10px;
+        align-items: baseline;
+        .price{
+            margin-right: 5px;
+        }
+    }
+}
+
+
+@include mq($from: tablet) {
+    .prod-slider{
+        padding-left: 20px;
+        .prod-slider-item{
+            padding-left:20px;
+        }
+        .slick-list{
+            overflow: visible;
+        }
+        
     }
 }

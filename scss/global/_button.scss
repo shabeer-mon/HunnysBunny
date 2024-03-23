@@ -8,7 +8,23 @@
     color: $-white;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: fit-content;
+    text-align: center;
+    
+    .inner{
+        display: flex;
+        align-items: center;
+        .text{
+            &:not(:last-child){
+                margin-right: 20px;
+            }
+        }
+        i{
+            font-size: 16px;
+        }
+        
+    }
     &-primary{
         background: rgba($-primary, .8);
         &:hover{
@@ -23,5 +39,29 @@
             background: rgba($-primary, 1);
             color: rgba($-white, 1);
         }
+    }
+    &-hollow{
+        background: transparent;
+        color: $-primary;
+        &:hover{
+            background: rgba($-primary, .05);
+        }
+    }
+    &-text{
+        background: transparent;
+        color: $-primary;
+        .inner{
+            border-bottom: 1px solid transparent;
+        }
+        &:hover{
+            .inner{
+                border-color: rgba($-primary, 1);
+            }
+        }
+    }
+    &-large{
+        width: 100%;
+        max-width: 300px;
+        padding: 17px 30px;
     }
 }

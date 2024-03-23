@@ -3,63 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Filter Section</title>
+<title>Filter Items on Input</title>
 <link rel="stylesheet" href="styles.css">
-<style>
-    
-    .filter-section {
-    display: none;
-    }
-
-.filter-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.filter-list li {
-  margin-bottom: 5px;
-  padding: 10px;
-  background-color: #f2f2f2;
-}
-
-</style>
 </head>
 <body>
-  <input type="text" id="filterInput" placeholder="Type here to filter...">
-  
-  <div id="filterSection" class="filter-section">
-    <h2>Filter Section</h2>
-    <ul id="filterList" class="filter-list">
-      <li>Filter Item 1</li>
-      <li>Filter Item 2</li>
-      <li>Filter Item 3</li>
-      <li>Filter Item 4</li>
-    </ul>
-  </div>
-  
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<input type="text" id="searchInput" placeholder="Type to filter">
+
+<div id="filterSection" style="display:none;">
+  <h2>Filtered Items</h2>
+  <ul id="filteredList">
+    <!-- Filtered items will be displayed here -->
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="script.js"></script>
 <script>
-    $(document).ready(function() {
-  $('#filterInput').on('input', function() {
-    var filterInputValue = $(this).val().toLowerCase();
-    
-    // Show filter section if filter input is not empty
-    if (filterInputValue.trim() !== '') {
-      $('#filterSection').slideDown();
+  $(document).ready(function() {
+  $('#searchInput').on('input', function() {
+    var searchText = $(this).val().toLowerCase().trim();
+    if (searchText) {
+      $('#filterSection').show();
+      $('#filteredList').empty();
+      // Replace this with your own filtering logic
+      var filteredItems = ['Item 1', 'Item 2', 'Item 3'].filter(function(item) {
+        return item.toLowerCase().indexOf(searchText) !== -1;
+      });
+      $.each(filteredItems, function(index, item) {
+        $('#filteredList').append('<li>' + item + '</li>');
+      });
     } else {
-      $('#filterSection').slideUp();
+      $('#filterSection').hide();
     }
-    
-    // Filter items based on input value
-    $('#filterList li').each(function() {
-      var text = $(this).text().toLowerCase();
-      if (text.indexOf(filterInputValue) !== -1) {
-        $(this).show();
-      } else {
-        $(this).hide();
-      }
-    });
   });
 });
 

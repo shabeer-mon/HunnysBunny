@@ -24,18 +24,42 @@ $(document).ready(function(){
     $(".search-btn").click(function(){
       $('body').addClass('search-active');
     });
+   
+    // filter drawer
+    $(".filter-button").click(function(){
+      $('body').addClass("overlay-active");
+      $('.filter-drawer').addClass("active");
+    });
+    // Cart drawer
+    $(".cart-button").click(function(){
+      $('body').addClass("overlay-active");
+      $('.cart-drawer').addClass("active");
+    });
+    //Drawer COLSER
+    $(".drawer-close").click(function(){
+      $('body').removeClass("overlay-active");
+      $('.filter-drawer').removeClass("active");
+      $('.cart-drawer').removeClass("active");
+    });
+    // Search close
     $(".search-close").click(function(){
       $('body').removeClass('search-active');
     });
 
-
-// FOOTER TAB
-$('.footer-tab .footer-menu').hide();
-$('.footer-tab .title').on('click', function() {
-  $(this).toggleClass('active').next('.footer-menu ').slideToggle();
-  $('.footer-menu ').not($(this).next('.footer-menu ')).slideUp();
+// collapse
+$('.collapse-item.active .collapse-panel').slideDown();
+$('.collapse-title').click(function() {
+    var accordionItem = $(this).closest('.collapse-item');
+    var accordionContent = accordionItem.find('.collapse-panel');
+    // Toggle active class and slide up/down the content
+    accordionItem.toggleClass('active');
+    accordionContent.slideToggle();
+    // Close other accordion items if they are open
+    $('.collapse-item').not(accordionItem).removeClass('active');
+    $('.collapse-panel').not(accordionContent).slideUp();
 });
-// FOOTER TAB end
+// collapse end
+
 
 
 // footer-on-scree
@@ -143,4 +167,7 @@ $(window).scroll(function() {
       }
     });
   });
+
+
+  
   });
