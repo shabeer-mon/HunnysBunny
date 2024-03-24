@@ -31,6 +31,10 @@
                     font-size: 14px;
                     font-weight: 400;
                     margin:0 0 15px;
+                    a{
+                        text-decoration: none;
+                        color: $-primary;
+                    }
                 }
                 .button-block{
                     display: flex;

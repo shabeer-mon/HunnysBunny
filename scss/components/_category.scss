@@ -51,7 +51,13 @@
                     text-transform: uppercase;
                     color: $-white;
                     text-shadow: 0 0 16px rgba($-primary, .5);
+                    
+                    a{
+                        color: $-white;
+                        text-decoration: none;
+                    }
                 }
+                
             }
             &:hover{
                 .inner-box{
