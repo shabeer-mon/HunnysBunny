@@ -6,12 +6,14 @@
         padding:7px;
         .inner-box{
             background: #F5F5F5;
-            padding: 30px 10px 15px;
+            padding: 30px 0 0  ;
             position: relative;
             border-radius: 15px;
             overflow: hidden;
+            height: 100%;
             .img-box{
-                margin-bottom: 20px;
+                display: inline-block;
+                width: 100%;
                 img{
                     transition: all 0.3s ease-in-out;
                     display: block;
@@ -27,6 +29,7 @@
                 font-size: 12px;
             }
             .content{
+                padding:10px 15px;
                 .title{
                     font-size: 14px;
                     font-weight: 400;
@@ -82,8 +85,8 @@
     .prod-list{
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    .prod-list .prod-list-item .inner-box{
-        padding: 40px 20px 20px; 
+    .prod-list .prod-list-item .inner-box .content{
+        padding: 20px; 
     }
     .prod-list .prod-list-item .inner-box .offer-text{
         top: 20px;

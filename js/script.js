@@ -80,6 +80,63 @@ $(window).scroll(function() {
 // footer-on-scree end
 
 
+// Category filter
+ // Initialize filter counter
+ updateFilterCounter();
+
+ // Checkbox change event
+ $('.category-checkbox').change(function() {
+   applyFilter();
+   updateFilterCounter();
+ });
+
+ // Clear button click event
+ $('#clearButton').click(function() {
+   clearFilter();
+ });
+
+ function applyFilter() {
+   var selectedCategories = [];
+   $('.category-checkbox:checked').each(function() {
+     selectedCategories.push($(this).val());
+   });
+
+   if (selectedCategories.length > 0) {
+     $('.product').hide();
+     selectedCategories.forEach(function(category) {
+       $('.product[data-categories*="' + category + '"]').show();
+       showSelectedCategories(selectedCategories);
+     });
+   } else {
+     // If no categories selected, show all products
+     $('.product').show();
+   }
+ }
+
+ function clearFilter() {
+   $('.category-checkbox').prop('checked', false);
+   $('.product').show();
+   updateFilterCounter();
+ }
+
+ function updateFilterCounter() {
+   var selectedCategories = $('.category-checkbox:checked').length;
+   $('#filterCounter').text('(' + selectedCategories + ')');
+ }
+ $(".applyButton").click(function(){
+  $('body').removeClass("overlay-active");
+  $('.filter-drawer').removeClass("active");
+});
+function showSelectedCategories(selectedCategories) {
+  $('.applied-categories').empty();
+  if (selectedCategories.length > 0) {
+    selectedCategories.forEach(function(category) {
+      $('.applied-categories').append('<span class="applied-category">' + category + '</span>');
+    });
+  }
+}
+// Category filter end
+
 // Slick
     $('.hunnys-bunny-banner').slick({
         infinite: true,

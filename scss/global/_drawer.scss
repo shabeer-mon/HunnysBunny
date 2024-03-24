@@ -28,6 +28,12 @@
             height: 100%;
             overflow: auto;
         }
+        .drawer-button-block{
+            padding: 20px;
+            .btn{
+                margin-left: auto;
+            }
+        }
     }
     &.active{
         .drawer-block{

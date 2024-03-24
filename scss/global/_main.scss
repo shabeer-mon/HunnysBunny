@@ -129,6 +129,51 @@ body{
         margin-bottom: 30px;
     }
 }
+.page-title-wrapper{
+    margin: 0px 0 40px;
+    .main-cat{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 5px;
+        .go-back{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            margin-right: 10px;
+        }
+        .main-cat-title{
+            font-size: 16px;
+            text-transform: uppercase;
+            margin: 0px;
+        }
+        
+    }
+    .page-title{
+        font-size: 20px;
+        text-transform: uppercase;
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+        .items-quantity{
+            font-size: 12px;
+            font-weight: 300;
+            margin-left: 8px;
+            margin-top: 2px;
+        }
+    }
+    @include mq($from: tablet) {
+            margin: -70px 0 60px;
+            .page-title{
+                font-size: 26px;
+                .items-quantity{
+                    font-size: 16px;
+                    margin-top: 4px;
+                }
+            }
+    }
+}
 
 
 .cart-block{

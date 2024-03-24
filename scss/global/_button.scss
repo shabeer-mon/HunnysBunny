@@ -11,7 +11,12 @@
     justify-content: center;
     width: fit-content;
     text-align: center;
-    
+    border: 0;
+    cursor: pointer;
+    &:disabled{
+        opacity: .4;
+        pointer-events: none;
+    }
     .inner{
         display: flex;
         align-items: center;

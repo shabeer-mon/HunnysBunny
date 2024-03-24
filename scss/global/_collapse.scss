@@ -74,6 +74,9 @@
                 display: flex;
                 justify-content: space-between;
             }
+            .collapse-panel{
+                border-bottom: 1px solid rgba($-primary, .1);
+            }
         }
     }
 }
