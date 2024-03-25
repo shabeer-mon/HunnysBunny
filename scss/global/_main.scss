@@ -105,24 +105,27 @@ body{
 // Category page
 
 .category-wrapper{
+    .product-card {
+        display: none;
+    }
     .prod-list{
-        
-        @include mq($from: tablet) {
-            margin: 0 -10px;
-        }
+        margin: 0 -8px;
     }
     .load-more-block{
         margin-top: 60px;
         .button-block{
-            margin: auto;
+            
             text-align: center;
+            #productCounter{
+                margin-left: 5px;
+                display: inline-block;
+            }
             .btn{
                 margin: auto;
                 &:not(:last-child){
                     margin-bottom: 15px;
                 }
             }
-            
         }
     }
     .filter-block{

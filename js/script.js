@@ -137,6 +137,43 @@ function showSelectedCategories(selectedCategories) {
 }
 // Category filter end
 
+
+
+// load more
+var totalProducts = $('.product-card').length;
+var productsToShow = 4;
+var productsShown = productsToShow;
+
+updateCounter();
+
+$('.product-card:lt(' + productsToShow + ')').show();
+
+$('#loadMoreButton').click(function() {
+  productsToShow += 4;
+  productsShown = Math.min(productsToShow, totalProducts);
+  $('.product-card:lt(' + productsToShow + ')').slideDown();
+  updateCounter();
+  if (productsShown === totalProducts) {
+    $(this).hide();
+    $('#showAllButton').hide();
+    $('.load-more-block').hide();
+  }
+});
+
+$('#showAllButton').click(function() {
+  $('.product-card').slideDown();
+  updateCounter();
+  $(this).hide();
+  $('#loadMoreButton').hide();
+  $('.load-more-block').hide();
+  
+});
+
+function updateCounter() {
+  $('#productCounter').text('(' + productsShown + '/' + totalProducts + ')');
+}
+// load more  end
+
 // Slick
     $('.hunnys-bunny-banner').slick({
         infinite: true,

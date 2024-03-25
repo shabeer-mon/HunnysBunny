@@ -37,20 +37,22 @@
     .middle-footer{
         order: 0;
         display: flex;
-        padding: 30px 0 0;
+        padding: 10px 0 0;
         flex-direction: column;
         border-top: 1px solid rgba($-primary, .1);
     }
     
     .payment-logos-block{
-        padding-top: 20px;
+        padding-top: 40px;
+        text-align: center;
         img{
             width: 100%;
             max-width: 250px;
         }
     }
     .bottom-footer{
-        padding: 0px 0 30px;
+        padding: 0px 0 20px;
+        text-align: center;
         .copywrite{
             font-size: 14px;
             text-transform: uppercase;
@@ -71,7 +73,14 @@
         .middle-footer{
             padding: 30px 0;
         }
-        
+        .payment-logos-block{
+            padding-top: 20px;
+            text-align: left;
+        }
+        .bottom-footer{
+            text-align: left;
+            padding: 0px 0 30px;
+        }
     }
 }
 @include mq($from: mobileHorizontal) {
