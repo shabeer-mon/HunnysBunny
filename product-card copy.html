@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page with Image Color Change</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Add your custom styles here */
+.product-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-images img {
+  display: none;
+}
+
+.color-options {
+  text-align: center;
+}
+
+.color-options input[type="radio"] {
+  display: none;
+}
+
+.color-options label {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.color-options label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.color-options #colorRed:checked + label::before {
+  background-color: red;
+}
+
+.color-options #colorBlue:checked + label::before {
+  background-color: blue;
+}
+
+.color-options #colorGreen:checked + label::before {
+  background-color: green;
+}
+
+</style>
+</head>
+<body>
+
+<div class="product-container">
+  <h2>Product Name</h2>
+  <div class="product-images">
+    <img src="product-red.jpg" alt="Red Product" id="productImageRed">
+    <img src="product-blue.jpg" alt="Blue Product" id="productImageBlue">
+    <img src="product-green.jpg" alt="Green Product" id="productImageGreen">
+  </div>
+</div>
+
+<div class="color-options">
+  <input type="radio" id="colorRed" name="colorOptions" value="red">
+  <label for="colorRed">Red</label>
+  <input type="radio" id="colorBlue" name="colorOptions" value="blue">
+  <label for="colorBlue">Blue</label>
+  <input type="radio" id="colorGreen" name="colorOptions" value="green">
+  <label for="colorGreen">Green</label>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+<script>
+  $(document).ready(function() {
+  // Function to update product image based on selected color
+  function updateProductImage(color) {
+    $('.product-images img').hide(); // Hide all images
+    $('#productImage' + color.charAt(0).toUpperCase() + color.slice(1)).show(); // Show the image corresponding to the selected color
+  }
+
+  // Event listener for color radio buttons
+  $('input[type="radio"][name="colorOptions"]').change(function() {
+    var selectedColor = $(this).val();
+    updateProductImage(selectedColor);
+  });
+});
+
+</script>
+</body>
+</html>

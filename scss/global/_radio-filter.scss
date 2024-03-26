@@ -1,8 +1,18 @@
 .filter{
-    &.style-1{
+    .checkbox-group{
+        font-size: 14px;
+        input{
+            padding: 0;
+            height: initial;
+            width: initial;
+            margin-bottom: 0;
+            display: none;
+            cursor: pointer;
+        }
+    }
+    &.style-1{   
         .checkbox-group{
             padding:20px 0;
-            font-size: 14px;
         }
         .checkbox-item{
             position: relative;
@@ -10,14 +20,7 @@
                 margin-bottom: 10px;
             }
            
-            input{
-                padding: 0;
-                height: initial;
-                width: initial;
-                margin-bottom: 0;
-                display: none;
-                cursor: pointer;
-            }
+            
             label{
                 position: relative;
                 cursor: pointer;
@@ -25,7 +28,7 @@
                 align-items: center;
                 &::before {
                     content:'';
-                    -webkit-appearance: none;
+                    // -webkit-appearance: none;
                     background-color: transparent;
                     border: 1px solid rgba($-primary, .2);
                     display: inline-block;
@@ -53,6 +56,49 @@
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
         }
+    }
+    &.style-2{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        .checkbox-item{
+            display: inline-block;
+            label{
+                padding: 10px 20px;
+                border: 2px solid rgba($-primary, .2);
+                border-radius: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: calc(100% - 30px);
+                    height: 1px;
+                    background: rgba($-primary, 1);
+                    display: none;
+                }
+            }
+            input:checked{
+                & + label{
+                    border-color: rgba($-primary, 1);
+                }
+            }
+            &.not-available{
+                pointer-events: none;
+                label{
+                    position: relative;
+                    border-style: dashed;
+                    color: rgba($-primary, .6);
+                    &::before{
+                       display: block;
+    
+                    }
+                }
+            }
+        }
+        
     }
 }
 

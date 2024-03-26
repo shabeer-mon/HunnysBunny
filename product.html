@@ -33,7 +33,6 @@
         [class^="icon-"], [class*=" icon-"] {
         /* use !important to prevent issues with browser extensions that change fonts */
         font-family: 'hunnybunny-icon' !important;
-        speak: never;
         font-style: normal;
         font-weight: normal;
         font-variant: normal;
@@ -92,9 +91,6 @@
         .icon-user:before {
         content: "\e906";
         }
-
-        
-
     </style>
 </head>
 <body class="top-bar-active ">
@@ -134,7 +130,7 @@
                     <span class="btn-close"><i class="icon-close"></i></span>
                 </li>
                 <li>
-                    <a href="/category.html">
+                    <a href="#">
                         <span class="text">Woman</span>
                         <i class="icon-right"></i>
                     </a>
@@ -154,269 +150,173 @@
             </menu>
         </nav>
         <main class="main">
-
             <header class="main-header">
                 <div class="container-fluid">
                     <a href="/" class="navbar-brand">
                         <img src="/images/logo1.svg" alt="logo"/>
                     </a>
                 </div>
-               
             </header>
-            
-            <section class="banner-wrapper">
-                <div class="container-fluid">
-                    <!-- Banner -->
-                    <div class="hunnys-bunny-banner">
-                        <div class="banner-item item1">
-                            <div class="banner-content">
-                                <div class="content">
-                                    <h2 class="title">Spice up Your Life</h2>
-                                    <p class="info-text">Discover Pleasure Beyond Imagination!</p>
-                                    <div class="button-block">
-                                        <a class="btn btn-primary" href="#">Shop now</a>
+            <section class="inner-wrapper"> 
+                <div class="product-wrapper">
+                    <div class="container-fluid">
+                        <div class="page-title-wrapper">
+                            <span class="prod-label">New</span>
+                            <h2 class="prod-title">Silicone Rabbit Vibrator</h2>
+                            <div class="price-block">
+                                <span class="price">£50.00</span>
+                                <span class="old-price">£70.00</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slider-wrapper">
+                            <div class="swiper-slider__arrows"></div>
+                            <div class="prod-list swiper-slider">
+                                <div class="prod-list-item">
+                                    <div class="inner-box">
+                                        <div class="img-box">
+                                            <img src="images/product-image-1.png" alt="" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="banner-image">
-                                    <img src="images/11.png" alt="" />
                                 </div>
                             </div>
                             
+                            <div class="swiper__counter"></div>
                         </div>
-                        <div class="banner-item item1">
-                            <div class="banner-content">
-                                <div class="content">
-                                    <h2 class="title">Spice up Your Life</h2>
-                                    <p class="info-text">Discover Pleasure Beyond Imagination!</p>
-                                    <div class="button-block">
-                                        <a class="btn btn-primary" href="#">Shop now</a>
-                                    </div>
+                        <div class="attributes-block">
+                            <div class="attributes-card">
+                                <div class="card-header">
+                                    <div class="title">Color: <span id="selectedColor"></span></div>
                                 </div>
-                                <div class="banner-image">
-                                    <img src="images/11.png" alt="" />
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <!-- Banner end -->
-                    <!-- offerInfo -->
-                    <div class="offerInfo">
-                        <div class="infoBox">
-                            <span class="icon-wrpr">
-                                <i class="icon-package"></i>
-                            </span>
-                            <div class="title-wrprt">
-                                <span class="title">100% Discreet Service</span>
-                                <p class="text">We offer discreet packaging, billing & delivery</p>
-                            </div>
-                        </div>
-                        <div class="infoBox">
-                            <span class="icon-wrpr">
-                                <i class="icon-shipping"></i>
-                            </span>
-                            <div class="title-wrprt">
-                                <span class="title">Free UK Delivery</span>
-                                <p class="text">Enjoy free shipping on orders above £40</p>
-                            </div>
-                        </div>
-                        <div class="infoBox">
-                            <span class="icon-wrpr">
-                                <i class="icon-return"></i>
-                            </span>
-                            <div class="title-wrprt">
-                                <span class="title">Money back promise</span>
-                                <p class="text">30 Returnable</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- offerInfo END -->
-                </div>
-               
-            </section>
-            <!-- category -->
-            <section class="category">
-                <div class="container-fluid">
-                    <h2 class="section-title"> Category</h2>
-                    <div class="d-grid category-block">
-                        <div class="category-item">
-                            <div class="inner-box">
-                                <a href="/category.html" class="img-box">
-                                    <img src="images/category1.jpg" alt="" />
-                                </a>
-                                <div class="content">
-                                    <h3 class="title"><a href="/category.html">Sex toys for woman</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-secondary" href="/category.html">Shop now</a>
+                                <div class="attributes-items color-card">
+                                    <div class="filter style-2">
+                                        <div class="checkbox-group">
+                                            <div class="checkbox-item">
+                                                <input type="radio" value="Pink" class="category-checkbox" id="colorPink" name="color">
+                                                <label for="colorPink">Pink</label>
+                                            </div>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <div class="checkbox-item">
+                                                <input type="radio" value="Red" class="category-checkbox" id="colorRed" name="color">
+                                                <label for="colorRed">Red</label>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="category-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/category2.jpg" alt="" />
-                                </a>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">ANAL TOYS</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-secondary" href="#">Shop now</a>
-                                    </div>
+                            <div class="attributes-card">
+                                <div class="card-header">
+                                    <div class="title">Size: <span id="selectedSize"></span></div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="category-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/category3.jpg" alt="" />
-                                </a>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">Strap-ons</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-secondary" href="#">Shop now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/category4.jpg" alt="" />
-                                </a>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">Clitoral Sucking</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-secondary" href="#">Shop now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- category  end-->
-            <!-- Weekly offer -->
-            <section class="weekly-offer">
-                <div class="container-fluid">
-                    <h2 class="section-title">Weekly offers</h2>
-                    <div class="prod-list prod-slider">
-                        <div class="prod-list-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/11.png" alt="" />
-                                </a>
-                                <span class="offer-text">Up to 50% Off</span>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">Silicone Rabbit Vibrator</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-primary" href="#">Shop now</a>
-                                        <div class="price-block">
-                                            <div class="price">£50.00</div>
-                                            <div class="old-price">£70.00</div>
+                                <div class="attributes-items color-card">
+                                    <div class="filter style-2">
+                                        <div class="checkbox-group ">
+                                            <div class="checkbox-item not-available">
+                                                <input type="radio" value="34" class="category-checkbox" id="34" name="size">
+                                                <label for="34">34</label>
+                                            </div>
+                                            <div class="checkbox-item">
+                                                <input type="radio" value="36" class="category-checkbox" id="36" name="size">
+                                                <label for="36">36</label>
+                                            </div>
+                                            <div class="checkbox-item">
+                                                <input type="radio" value="37" class="category-checkbox" id="37" name="size">
+                                                <label for="37">37</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="prod-list-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/11.png" alt="" />
-                                </a>
-                                <span class="offer-text">Up to 50% Off</span>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">Silicone Rabbit Vibrator</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-primary" href="#">Shop now</a>
-                                        <div class="price-block">
-                                            <div class="price">£50.00</div>
-                                            <div class="old-price">£70.00</div>
-                                        </div>
+                        <div class="button-block ">
+                            <button class="btn btn-primary btn-large m-auto">Add to cart</button>
+                        </div>
+
+                        <div  class="collapse-wrapper style-2">
+                            <div class="collapse-item active">
+                                <h4 class="collapse-title">
+                                    <span class="text">Description</span>
+                                    <span class="plusminus"></span>
+                                </h4>
+                                <div class="collapse-panel">
+                                    <div class="prod-discription">
+                                        <p>Unicorn low-top trainers in neoprene and calfskin</p>
+                                        <ul>
+                                            <li>Multi-material design in neoprene and calfskin</li>
+                                            <li>Lace fastening with "Lion Head" press studs on the front</li>
+                                            <li>3D Balmain logo on the tongue and heel, and embossed on the sides</li>
+                                            <li>Balmain branded lace detail at the heel</li>
+                                            <li>Hollow sole with air-cushion effect, B studs</li>
+                                            <li>Neoprene lining</li>
+                                            <li>Leather insole</li>
+                                            <li>Sole height: 7 cm</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="prod-list-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/11.png" alt="" />
-                                </a>
-                                <span class="offer-text">Up to 50% Off</span>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">Silicone Rabbit Vibrator</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-primary" href="#">Shop now</a>
-                                        <div class="price-block">
-                                            <div class="price">£50.00</div>
-                                            <div class="old-price">£70.00</div>
-                                        </div>
+                            <div class="collapse-item ">
+                                <h4 class="collapse-title">Delivery and returns<span class="plusminus"></span></h4>
+                                <div class="collapse-panel">
+                                    <div class="delivery__retun">
+                                        <ul class="list-icon-style">
+                                            <li>
+                                                <span class="icon-block">
+                                                    <i class="icon-van"></i>
+                                                </span>
+                                                <div class="content">
+                                                    <div class="title">DELIVERY</div>
+                                                    <div>- Express delivery made within 2-4 working days (£7)</div>
+                                                    <div>- Potential delays to be communicated due to customs-approved treatment
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="icon-block">
+                                                    <i class="icon-return"></i>
+                                                </span>
+                                                <div class="content">
+                                                    <div class="title">RETURNS</div>
+                                                    <div>All returns are free of charge. For more information, see our <span class="link">return policy</span> </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="icon-block">
+                                                    <i class="icon-card"></i>
+                                                </span>
+                                                <div class="content">
+                                                    <div class="title">PAYMENT</div>
+                                                    <div>Credit card, debit card, Google pay, Apple pay</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="icon-block">
+                                                    <i class="icon-lens"></i>
+                                                </span>
+                                                <div class="content">
+                                                    <div class="title">FAQ</div>
+                                                    <div>Looking for information? <span class="link">FAQ</span> </div>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="prod-list-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/11.png" alt="" />
-                                </a>
-                                <span class="offer-text">Up to 50% Off</span>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">Silicone Rabbit Vibrator</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-primary" href="#">Shop now</a>
-                                        <div class="price-block">
-                                            <div class="price">£50.00</div>
-                                            <div class="old-price">£70.00</div>
-                                        </div>
-                                    </div>
+                            <div class="collapse-item ">
+                                <h4 class="collapse-title">Contact<span class="plusminus"></span></h4>
+                                <div class="collapse-panel">
+                                    <p>Send us an  <a class="link" href="mailto:info@hunnysbunny.com">email</a> : our customer care team will get back to you as soon as possible.</p> 
                                 </div>
                             </div>
                         </div>
-                        <div class="prod-list-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/11.png" alt="" />
-                                </a>
-                                <span class="offer-text">Up to 50% Off</span>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">Silicone Rabbit Vibrator</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-primary" href="#">Shop now</a>
-                                        <div class="price-block">
-                                            <div class="price">£50.00</div>
-                                            <div class="old-price">£70.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </section>
-             <!-- Weekly offer  end-->
-             <!-- double-col-banner-->
-             <section class="double-col-banner">
+             <!-- You may also like peoduct -->
+             <section class="prod-card-slider">
                 <div class="container-fluid">
-                    <div class="double-banner-wrapper">
-                        <div class="content bg-purple text-white">
-                            <h2 class="title">Spice up Your Life</h2>
-                            <p class="info-text">Discover Pleasure Beyond Imagination!</p>
-                            <div class="button-block">
-                                <a class="btn btn-secondary" href="#">Shop now</a>
-                            </div>
-                        </div>
-                        <div class="img-box">
-                            <img src="images/second-banner.jpg" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- double-col-banner end -->
-             <!-- Top selling peoduct -->
-             <section class="weekly-offer">
-                <div class="container-fluid">
-                    <h2 class="section-title">Top selling peoduct</h2>
+                    <h2 class="section-title text-left">You may also like peoduct</h2>
                     <div class="prod-list prod-slider">
                         <div class="prod-list-item">
                             <div class="inner-box">
@@ -509,34 +409,17 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
+                <div class="spacer"></div>
             </section>
              <!-- Top selling peoduct  end-->
-              <!-- double-col-banner-->
-              <section class="single-banner">
-                <div class="container-fluid">
-                    <div class="single-banner-wrapper">
-                        <div class="img-box">
-                            <img src="images/single-banner.jpg" alt="" />
-                        </div>
-                        <div class="content text-white">
-                            <h2 class="title">Sexy Lingerie & Underwear</h2>
-                            <p class="info-text">Elevate your allure with seductive lingerie and intimate wear from Hunnys Bunny!</p>
-                            <div class="button-block">
-                                <a class="btn btn-secondary" href="#">Shop now</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </section>
-            <!-- double-col-banner end -->
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="top-footer">
                         <div class="box">
                             <h4 class="title">News letter</h4>
-                            <input type="email" class="form-control newsletter" placeholder="Email" />
+                            <input type="email" name="email" autocomplete="email" class="form-control newsletter" placeholder="Email" />
                         </div>
                         <div class="box">
                             <h4 class="title">CUSTOMER SERVICE</h4>
@@ -578,7 +461,7 @@
                         
                         <div class="box">
                             <h4 class="title">DELIVERY COUNTRY/REGION</h4>
-                            <input type="email" class="form-control newsletter" disabled value="United Kingdom" placeholder="Country" />
+                            <input type="email" class="form-control newsletter" name="Country" autocomplete="Country" disabled value="United Kingdom" placeholder="Country" />
                             <div class="payment-logos-block">
                                 <img src="images/payment-logos.svg" alt="" />
                             </div>
@@ -590,7 +473,6 @@
                 </div>
             </footer>
         </main>
-     
         <div class="search">
             <div class="container">
                 <span class="btn-close search-close"><i class="icon-close"></i></span>
@@ -757,6 +639,63 @@
                 </div>
             </div>
         </div>
+        <div class="drawer filter-drawer">
+            <div class="drawer-block">
+                <div class="drawer-header">
+                    <h3 class="title">Filters</h3>
+                    <span class="btn-close drawer-close">
+                        <i class="icon-close"></i>
+                    </span>
+                </div>
+                <div class="drawer-inner">
+                    <div  class="collapse-wrapper style-1">
+                        <div class="collapse-item active">
+                            <h4 class="collapse-title">
+                                <span class="text">Category</span>
+                                <span class="plusminus"></span>
+                            </h4>
+                            <div class="collapse-panel">
+                                <div class="filter style-1">
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" value="category1" class="category-checkbox" id="wellness">
+                                            <label for="wellness">Sexual Wellness Products</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" value="category2" class="category-checkbox"  id="exotic">
+                                            <label for="exotic">Men's Exotic Apparel</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-item">
+                            <h4 class="collapse-title">Sizes<span class="plusminus"></span></h4>
+                            <div class="collapse-panel"> 
+                                <div class="filter style-2">
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" value="category1" class="category-checkbox" id="size34">
+                                            <label for="size34">34</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" value="category2" class="category-checkbox"  id="size35">
+                                            <label for="size35">35</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+                <div class="drawer-button-block">
+                    <button class="btn btn-primary btn-large applyButton" id="applyButton">Apply <span id="filterCounter"></span></button>
+                    <button class="btn btn-text" id="clearButton"><span class="inner">Clear</span> </button>
+                </div>
+            </div>
+        </div>
         <div class="drawer cart-drawer">
             <div class="drawer-block">
                 <div class="drawer-header">
@@ -783,6 +722,23 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+      var numberOfProducts = 8; // Number of times to repeat the product card
+    
+      // Get the static product card template
+      var productTemplate = $('.swiper-slider .prod-list-item').clone();
+    
+      // Remove the 'display: none;' style from the template
+      productTemplate.removeAttr('style');
+    
+      // Repeat the product card template
+      for (var i = 0; i < numberOfProducts; i++) {
+        $('.swiper-slider').append(productTemplate.clone());
+      }
+    });
+    
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>

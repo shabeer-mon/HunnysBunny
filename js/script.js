@@ -95,6 +95,19 @@ $(window).scroll(function() {
    clearFilter();
  });
 
+
+//  Select radio size
+ $('.attributes-items input[type="radio"]').change(function() {
+  var selectedOption = $('input[name="size"]:checked').val();
+  $('#selectedSize').text(selectedOption);
+});
+
+//  Select radio color
+$('.attributes-items input[type="radio"]').change(function() {
+  var selectedOption = $('input[name="color"]:checked').val();
+  $('#selectedColor').text(selectedOption);
+});
+
  function applyFilter() {
    var selectedCategories = [];
    $('.category-checkbox:checked').each(function() {
@@ -123,6 +136,8 @@ $(window).scroll(function() {
    var selectedCategories = $('.category-checkbox:checked').length;
    $('#filterCounter').text('(' + selectedCategories + ')');
  }
+
+
  $(".applyButton").click(function(){
   $('body').removeClass("overlay-active");
   $('.filter-drawer').removeClass("active");
@@ -182,7 +197,6 @@ function updateCounter() {
         dots: true,
         autoplay: true,
         swipe:true,
-        cssEase: 'linear',
         speed: 800,
     });
 
@@ -219,7 +233,6 @@ function updateCounter() {
         dots: false,
         autoplay: false,
         swipe:true,
-        cssEase: 'linear',
         speed:500,
         mobileFirst:true,
         responsive: [
@@ -232,6 +245,26 @@ function updateCounter() {
         ]
         
     });
+
+    $(".swiper-slider").on("init reInit afterChange", function(event, slick) {
+      $(".swiper__counter").html(
+        slick.slickCurrentSlide() + 1 + "/" + slick.slideCount
+      );
+    });
+    $('.swiper-slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      swipe:true,
+      speed:500,
+      mobileFirst:true,
+      appendArrows: $(".swiper-slider__arrows"),
+      prevArrow: '<div class="swiper__arrow arrow-left"><i class="icon-left"></i></div>',
+      nextArrow: '<div class="swiper__arrow arrow-right"><i class="icon-right"></i></div>',
+      
+  });
+  
 
     $('.hunnys-bunny-banner').click(function(e){
       e.currentTarget.classList.add('slick-current', 'slick-active','slick-center');

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Product Cards</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    /* Add your custom styles here */
+/* .product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+} */
+.product {
+  text-align: center;
+}
+
+.product img {
+  max-width: 200px;
+}
+</style>
+</head>
+<body>
+
+<div class="product-container">
+  <!-- Static product card to be repeated -->
+  <!-- <div class="product">
+    Product (Category)
+  </div> -->
+</div>
+<div class="product-container">
+  <div class="product">
+    <img src="images/top-selling-1.png" alt="Product Image" id="productImage">
+    <p>Product Description</p>
+  </div>
+</div>
+
+<div>
+  <input type="radio" id="colorOption1" name="colorOptions" value="color1">
+  <label for="colorOption1">Color 1</label>
+  <br>
+  <input type="radio" id="colorOption2" name="colorOptions" value="color2">
+  <label for="colorOption2">Color 2</label>
+  <br>
+  <input type="radio" id="colorOption3" name="colorOptions" value="color3">
+  <label for="colorOption3">Color 3</label>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+<script>
+//     $(document).ready(function() {
+//   var numberOfProducts = 3; // Number of times to repeat the product card
+
+//   // Get the static product card template
+//   var productTemplate = $('.product').clone();
+
+//   // Remove the 'display: none;' style from the template
+//   productTemplate.removeAttr('style');
+
+//   // Repeat the product card template
+//   for (var i = 0; i < numberOfProducts; i++) {
+//     $('.product-container').append(productTemplate.clone());
+//   }
+// });
+$(document).ready(function() {
+  $('input[type="radio"]').change(function() {
+    var selectedColor = $('input[name="colorOptions"]:checked').val();
+    var imagePath = 'images/image-' + selectedColor + '.jpg'; // Assuming images are named like "image-color1.jpg", "image-color2.jpg", etc.
+    $('#productImage').attr('src', imagePath);
+  });
+});
+
+</script>
+</body>
+</html>
