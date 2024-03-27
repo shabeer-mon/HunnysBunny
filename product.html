@@ -114,7 +114,7 @@
                             </a>
                         </li>
                         <li><a href="javascript:void(0)" class="search-btn"><i class="icon-lens"></i></a></li>
-                        <li><a href="#" class="cart-button"><i class="icon-bag"></i></a></li>
+                        <li><a href="#" data-target="cartDrawer" class="drawer-button"><i class="icon-bag"></i></a></li>
                     </menu>
                 </div>
 
@@ -162,7 +162,14 @@
                                 <div class="prod-list-item">
                                     <div class="inner-box">
                                         <div class="img-box">
-                                            <img src="images/product-image-1.png" alt="" />
+                                            <img src="images/product-image-1.png" class="productImage" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prod-list-item">
+                                    <div class="inner-box">
+                                        <div class="img-box">
+                                            <img src="images/product-image-2.png" class="productImage" alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -190,6 +197,12 @@
                                     </div>
                                     <div class="attributes-items color-card">
                                         <div class="filter style-2">
+                                            <div class="checkbox-group">
+                                                <div class="checkbox-item">
+                                                    <input type="radio" value="Black" class="category-checkbox" id="colorBlack" name="color" checked>
+                                                    <label for="colorBlack">Black</label>
+                                                </div>
+                                            </div>
                                             <div class="checkbox-group">
                                                 <div class="checkbox-item">
                                                     <input type="radio" value="Pink" class="category-checkbox" id="colorPink" name="color">
@@ -231,7 +244,7 @@
                                 </div>
                             </div>
                             <div class="button-block ">
-                                <button class="btn btn-primary btn-large m-auto">Add to cart</button>
+                                <button data-target="cartDrawer" class="btn btn-primary btn-large m-auto drawer-button" data-name="SILICONE RABBIT VIBRATOR" data-price="50" data-size="sizeOption" data-color="colorOption">Add to cart</button>
                             </div>
                             <div  class="collapse-wrapper style-2">
                                 <div class="collapse-item active">
@@ -337,78 +350,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="prod-list-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/top-selling-1.png" alt="" />
-                                </a>
-                                <span class="offer-text">Up to 50% Off</span>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">Silicone Rabbit Vibrator</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-primary" href="#">Shop now</a>
-                                        <div class="price-block">
-                                            <div class="price">£50.00</div>
-                                            <div class="old-price">£70.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prod-list-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/top-selling-1.png" alt="" />
-                                </a>
-                                <span class="offer-text">Up to 50% Off</span>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">Silicone Rabbit Vibrator</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-primary" href="#">Shop now</a>
-                                        <div class="price-block">
-                                            <div class="price">£50.00</div>
-                                            <div class="old-price">£70.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prod-list-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/top-selling-1.png" alt="" />
-                                </a>
-                                <span class="offer-text">Up to 50% Off</span>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">Silicone Rabbit Vibrator</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-primary" href="#">Shop now</a>
-                                        <div class="price-block">
-                                            <div class="price">£50.00</div>
-                                            <div class="old-price">£70.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prod-list-item">
-                            <div class="inner-box">
-                                <a href="#" class="img-box">
-                                    <img src="images/top-selling-1.png" alt="" />
-                                </a>
-                                <span class="offer-text">Up to 50% Off</span>
-                                <div class="content">
-                                    <h3 class="title"><a href="#">Silicone Rabbit Vibrator</a></h3>
-                                    <div class="button-block">
-                                        <a class="btn btn-primary" href="#">Shop now</a>
-                                        <div class="price-block">
-                                            <div class="price">£50.00</div>
-                                            <div class="old-price">£70.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                     
                 </div>
@@ -640,11 +582,13 @@
                 </div>
             </div>
         </div>
-        <div class="drawer filter-drawer">
+
+
+        <div class="modal drawer filter-drawer" id="filterDrawer">
             <div class="drawer-block">
                 <div class="drawer-header">
                     <h3 class="title">Filters</h3>
-                    <span class="btn-close drawer-close">
+                    <span class="btn-close close">
                         <i class="icon-close"></i>
                     </span>
                 </div>
@@ -697,22 +641,28 @@
                 </div>
             </div>
         </div>
-        <div class="drawer cart-drawer">
+
+
+        <div class="modal drawer cart-drawer" id="cartDrawer">
             <div class="drawer-block">
                 <div class="drawer-header">
                     <h3 class="title">BAG (0)</h3>
-                    <span class="btn-close drawer-close">
+                    <span class="btn-close close">
                         <i class="icon-close"></i>
                     </span>
                 </div>
                 <div class="drawer-inner">
                     <div class="cart-block">
-                        <div class="empty">
+                        <!-- <div class="empty">
                             <h2 class="title">You bag is empty</h2>
                             <div class="button-block">
                                 <a class="btn btn-primary btn-large" href="#">continue shopping</a>
                             </div>
-                        </div>
+                        </div> -->
+                        <table class="show-cart table">
+
+                        </table>
+                        <div>Total price: $<span class="total-cart"></span></div>
                     </div>
                 </div>
             </div>
@@ -728,18 +678,21 @@
       var numberOfProducts = 8; // Number of times to repeat the product card
     
       // Get the static product card template
-      var productTemplate = $('.swiper-slider .prod-list-item').clone();
+      var productTemplate = $('.prod-card-slider .prod-slider .prod-list-item').clone();
     
       // Remove the 'display: none;' style from the template
       productTemplate.removeAttr('style');
     
       // Repeat the product card template
       for (var i = 0; i < numberOfProducts; i++) {
-        $('.swiper-slider').append(productTemplate.clone());
+        $('.prod-slider').append(productTemplate.clone());
       }
     });
     
     </script>
+       <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
+ 
+
 </body>
 </html>

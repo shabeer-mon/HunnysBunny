@@ -25,16 +25,35 @@ $(document).ready(function(){
       $('body').addClass('search-active');
     });
    
+// drawer
+    $('.drawer-button').click(function() {
+      var targetModalId = $(this).data('target');
+      $('#' + targetModalId).show().addClass("active");
+      $('body').addClass("overlay-active");
+    });
+  
+    // Close the modal when the close button or outside the modal is clicked
+    $('.close, .modal').click(function() {
+      $('.modal').removeClass("active");
+      $('body').removeClass("overlay-active");
+      window.setTimeout(function(){
+        $('.modal').hide()
+      }, 400); //<-- Delay in milliseconds
+    });
+  
+    // Prevent the modal from closing when the modal content is clicked
+    $('.drawer-block').click(function(e) {
+      e.stopPropagation();
+    });
+
+// drawer end
+
     // filter drawer
     $(".filter-button").click(function(){
       $('body').addClass("overlay-active");
       $('.filter-drawer').addClass("active");
     });
-    // Cart drawer
-    $(".cart-button").click(function(){
-      $('body').addClass("overlay-active");
-      $('.cart-drawer').addClass("active");
-    });
+
     //Drawer COLSER
     $(".drawer-close").click(function(){
       $('body').removeClass("overlay-active");
@@ -98,15 +117,18 @@ $(window).scroll(function() {
 
 //  Select radio size
  $('.attributes-items input[type="radio"]').change(function() {
-  var selectedOption = $('input[name="size"]:checked').val();
-  $('#selectedSize').text(selectedOption);
+  var sizeOption = $('input[name="size"]:checked').val();
+  $('#selectedSize').text(sizeOption);
 });
 
 //  Select radio color
 $('.attributes-items input[type="radio"]').change(function() {
-  var selectedOption = $('input[name="color"]:checked').val();
-  $('#selectedColor').text(selectedOption);
+  var colorOption = $('input[name="color"]:checked').val();
+  var imagePath = 'images/image-' + colorOption + '.png';
+  $('#selectedColor').text(colorOption);
+  $('.productImage').attr('src', imagePath);
 });
+
 
  function applyFilter() {
    var selectedCategories = [];
@@ -294,7 +316,6 @@ function updateCounter() {
       }
     });
   });
-
 
   
   });

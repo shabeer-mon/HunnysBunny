@@ -1,12 +1,16 @@
 .drawer{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    z-index: 36;
     .drawer-block{
         position: fixed;
         top: 0;
         right:0px;
-        width: 360px;
+        width: 320px;
         height: 100%;
         background: $-white;
-        z-index: 36;
+        z-index: 37;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
