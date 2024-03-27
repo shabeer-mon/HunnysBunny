@@ -9,6 +9,9 @@
             display: none;
             cursor: pointer;
         }
+        label{
+            cursor: pointer;
+        }
     }
     &.style-1{   
         .checkbox-group{

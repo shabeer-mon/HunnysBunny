@@ -42,9 +42,6 @@
   <br>
   <input type="radio" id="colorOption2" name="colorOptions" value="color2">
   <label for="colorOption2">Color 2</label>
-  <br>
-  <input type="radio" id="colorOption3" name="colorOptions" value="color3">
-  <label for="colorOption3">Color 3</label>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
@@ -66,7 +63,7 @@
 $(document).ready(function() {
   $('input[type="radio"]').change(function() {
     var selectedColor = $('input[name="colorOptions"]:checked').val();
-    var imagePath = 'images/image-' + selectedColor + '.jpg'; // Assuming images are named like "image-color1.jpg", "image-color2.jpg", etc.
+    var imagePath = 'images/image-' + selectedColor + '.png'; // Assuming images are named like "image-color1.jpg", "image-color2.jpg", etc.
     $('#productImage').attr('src', imagePath);
   });
 });
