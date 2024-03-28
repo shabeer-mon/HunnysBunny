@@ -211,6 +211,26 @@ function updateCounter() {
 }
 // load more  end
 
+
+// Add to cart animation
+$('#addtocart').on('click',function(){
+  var button = $(this);
+  var cart = $('#cart');
+  var cartTotal = cart.attr('data-totalitems');
+  var newCartTotal = parseInt(cartTotal) + 1;
+  
+  button.addClass('sendtocart');
+  setTimeout(function(){
+    button.removeClass('sendtocart');
+    cart.addClass('shake').attr('data-totalitems', newCartTotal).text(newCartTotal);
+    setTimeout(function(){
+      cart.removeClass('shake');
+    },500)
+  },300)
+})
+
+
+
 // Slick
     $('.hunnys-bunny-banner').slick({
         infinite: true,
@@ -288,9 +308,9 @@ function updateCounter() {
   });
   
 
-    $('.hunnys-bunny-banner').click(function(e){
-      e.currentTarget.classList.add('slick-current', 'slick-active','slick-center');
-  });
+  //   $('.hunnys-bunny-banner').click(function(e){
+  //     e.currentTarget.classList.add('slick-current', 'slick-active','slick-center');
+  // });
 
 
 
@@ -317,5 +337,7 @@ function updateCounter() {
     });
   });
 
+
   
-  });
+
+});

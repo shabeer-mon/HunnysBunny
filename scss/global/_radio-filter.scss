@@ -61,11 +61,12 @@
         }
     }
     &.style-2{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
+        .checkbox-group{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
         .checkbox-item{
-            display: inline-block;
             label{
                 padding: 10px 20px;
                 border: 2px solid rgba($-primary, .2);

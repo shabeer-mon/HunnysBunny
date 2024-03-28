@@ -114,7 +114,12 @@
                             </a>
                         </li>
                         <li><a href="javascript:void(0)" class="search-btn"><i class="icon-lens"></i></a></li>
-                        <li><a href="#" data-target="cartDrawer" class="drawer-button"><i class="icon-bag"></i></a></li>
+                        <li>
+                            <a href="#" data-target="cartDrawer"  class="drawer-button" >
+                                <i class="icon-bag"></i>
+                                <span id="cart" class="minicart-quantity" data-totalitems="0"></span>
+                            </a>
+                        </li>
                     </menu>
                 </div>
 
@@ -202,20 +207,15 @@
                                                     <input type="radio" value="Black" class="category-checkbox" id="colorBlack" name="color" checked>
                                                     <label for="colorBlack">Black</label>
                                                 </div>
-                                            </div>
-                                            <div class="checkbox-group">
                                                 <div class="checkbox-item">
                                                     <input type="radio" value="Pink" class="category-checkbox" id="colorPink" name="color">
                                                     <label for="colorPink">Pink</label>
                                                 </div>
-                                            </div>
-                                            <div class="checkbox-group">
                                                 <div class="checkbox-item">
                                                     <input type="radio" value="Red" class="category-checkbox" id="colorRed" name="color">
                                                     <label for="colorRed">Red</label>
                                                 </div>
                                             </div>
-    
                                         </div>
                                     </div>
                                 </div>
@@ -244,7 +244,11 @@
                                 </div>
                             </div>
                             <div class="button-block ">
-                                <button data-target="cartDrawer" class="btn btn-primary btn-large m-auto drawer-button" data-name="SILICONE RABBIT VIBRATOR" data-price="50" data-size="sizeOption" data-color="colorOption">Add to cart</button>
+                                <button  id="addtocart" class="btn btn-primary btn-large m-auto " data-name="SILICONE RABBIT VIBRATOR" data-price="50" data-size="sizeOption" data-color="colorOption">
+                                    <!-- data-target="cartDrawer" drawer-button -->
+                                    Add to cart
+                                    <span class="cart-item"></span>
+                                </button>
                             </div>
                             <div  class="collapse-wrapper style-2">
                                 <div class="collapse-item active">
@@ -290,7 +294,7 @@
                                                     </span>
                                                     <div class="content">
                                                         <div class="title">RETURNS</div>
-                                                        <div>All returns are free of charge. For more information, see our <span class="link">return policy</span> </div>
+                                                        <div>All returns are free of charge. For more information, see our <span class="link drawer-button" data-target="returnPolicy">return policy</span> </div>
                                                     </div>
                                                 </li>
                                                 <li>
@@ -659,10 +663,105 @@
                                 <a class="btn btn-primary btn-large" href="#">continue shopping</a>
                             </div>
                         </div> -->
-                        <table class="show-cart table">
+                        <div class="cart-list">
+                            <div class="list">
+                                <span class="icon-block">
+                                    <img src="images/image-Black.png" alt="">
+                                </span>
+                                <div class="content">
+                                    <h2 class="title">Silicone Rabbit Vibrator</h2>
+                                    <div class="info">
+                                        <div>Color: Black</div>
+                                        <div>Size: 36</div>
+                                        <div>Quantity: 1</div>
+                                    </div>
+                                    <div class="price">£50.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-estimate">
+                            <span class="estimate-title">Total (Estimated)</span>
+                            <span class="estimate-price">£50.00</span>
+                        </div>
+                        <!-- <table class="show-cart table">
 
                         </table>
-                        <div>Total price: $<span class="total-cart"></span></div>
+                        <div>Total price: $<span class="total-cart"></span></div> -->
+                    </div>
+                </div>
+                <div class="drawer-button-block">
+                    <button class="btn btn-primary btn-large m-auto">Go to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal drawer" id="returnPolicy">
+            <div class="drawer-block">
+                <div class="drawer-header">
+                    <h3 class="title">Return Policy</h3>
+                    <span class="btn-close close">
+                        <i class="icon-close"></i>
+                    </span>
+                </div>
+                <div class="drawer-inner">
+                    <div class="data-load">
+                        <p>At [Your Company Name], we want you to be completely satisfied with your purchase. If for any reason you are not satisfied, you may return the item(s) within [number of days] days of receiving your order for a full refund or exchange.</p>
+                        <h4>Conditions for Return</h4>
+                        <ul>
+                            <li>Items must be unused, unworn, and in the same condition as received.</li>
+                            <li>All original tags, packaging, and accessories must be intact and included with the returned item(s).</li>
+                            <li>Returns must be initiated within [number of days] days of receiving your order.</li>
+                            <li>We reserve the right to refuse returns that do not meet the above conditions.</li>
+                        </ul>
+                        <h4>How to Initiate a Return </h4>
+                        <p>To initiate a return, please follow these steps:</p>
+                        <ol>
+                            <li>Contact our customer service team at [contact email/phone number] to request a return authorization.</li>
+                            <li>Pack the item(s) securely in the original packaging along with the original invoice or receipt.</li>
+                            <li>Ship the item(s) to the address provided by our customer service team.</li>
+                        </ol>
+                        <h4>Refunds</h4>
+                        <p>Once your return is received and inspected, we will process your refund within [number of days] days. Refunds will be issued to the original payment method used for the purchase.</p>
+                        <h4>Exchanges</h4>
+                        <p>If you wish to exchange an item for a different size, color, or style, please contact our customer service team to arrange an exchange. Exchanges are subject to availability.</p>
+                        <h4>Contact Us</h4>
+                        <p>If you have any questions or concerns about our return policy, please don't hesitate to contact our customer service team at [contact email/phone number]. We're here to help!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal drawer" id="FAQ">
+            <div class="drawer-block">
+                <div class="drawer-header">
+                    <h3 class="title">FAQ</h3>
+                    <span class="btn-close close">
+                        <i class="icon-close"></i>
+                    </span>
+                </div>
+                <div class="drawer-inner">
+                    <div class="data-load">
+                       <ol>
+                        <li>
+                            <span class="title">How do I place an order?</span>
+                            <p>To place an order, simply browse our website, select the desired items, and add them to your cart. Once you've finished shopping, proceed to checkout, where you'll provide your shipping and payment information.</p>
+                        </li>
+                        <li>
+                            <span class="title">What payment methods do you accept?</span>
+                            <p></p>
+                        </li>
+                        <li>
+                            <span class="title"></span>
+                            <p></p>
+                        </li>
+                        <li>
+                            <span class="title"></span>
+                            <p></p>
+                        </li>
+                        <li>
+                            <span class="title"></span>
+                            <p></p>
+                        </li>
+                       </ol>
                     </div>
                 </div>
             </div>
@@ -676,16 +775,16 @@
     <script>
         $(document).ready(function() {
       var numberOfProducts = 8; // Number of times to repeat the product card
-    
       // Get the static product card template
       var productTemplate = $('.prod-card-slider .prod-slider .prod-list-item').clone();
-    
+      var cartTemplate = $('.cart-list .item').clone();
       // Remove the 'display: none;' style from the template
-      productTemplate.removeAttr('style');
+    //   productTemplate.removeAttr('style');
     
       // Repeat the product card template
       for (var i = 0; i < numberOfProducts; i++) {
         $('.prod-slider').append(productTemplate.clone());
+        $('.cart-list').append(cartTemplate.clone());
       }
     });
     

@@ -1,4 +1,4 @@
- // ************************************************
+   // ************************************************
     // Shopping Cart API
     // ************************************************
 
@@ -9,10 +9,12 @@
       cart = [];
 
       // Constructor
-      function Item(name, price, count) {
+      function Item(name, price, count, size, color) {
         this.name = name;
         this.price = price;
         this.count = count;
+        this.size = size;
+        this.color = color;
       }
 
       // Save cart
@@ -143,8 +145,10 @@
     $('.add-to-cart').click(function (event) {
       event.preventDefault();
       var name = $(this).data('name');
+      var size = $(this).data('size');
+      var color = $(this).data('color');
       var price = Number($(this).data('price'));
-      shoppingCart.addItemToCart(name, price, 1);
+      shoppingCart.addItemToCart(name, price, color, size,  1);
       displayCart();
     });
 
@@ -168,7 +172,9 @@
           + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
           + " = "
           + "<td>" + cartArray[i].total + "</td>"
-          + "</tr>";
+          + "</tr>"
+          + "<div>(" + cartArray[i].color + ")</div>"
+          + "<div>(" + cartArray[i].size + ")</div>";
       }
       $('.show-cart').html(output);
       $('.total-cart').html(shoppingCart.totalCart());
