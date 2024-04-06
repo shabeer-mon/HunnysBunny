@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#1D2129">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#1D2129">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hunnys Bunny</title>
+    <style>
+        @font-face {
+        font-family: 'hunnybunny-icon';
+        src:  url('fonts/hunnybunny-icon.eot');
+        src:  url('fonts/hunnybunny-icon.eot') format('embedded-opentype'),
+            url('fonts/hunnybunny-icon.ttf') format('truetype'),
+            url('fonts/hunnybunny-icon.woff') format('woff'),
+            url('fonts/hunnybunny-icon.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+        }
+
+        [class^="icon-"], [class*=" icon-"] {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'hunnybunny-icon' !important;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        }
+        .icon-van:before {
+        content: "\e90e";
+        }
+        .icon-card:before {
+        content: "\e90f";
+        }
+        .icon-filter:before {
+        content: "\e90d";
+        }
+        .icon-facebook:before {
+        content: "\e90b";
+        }
+        .icon-instagram:before {
+        content: "\e90c";
+        }
+        .icon-shipping:before {
+        content: "\e908";
+        }
+        .icon-return:before {
+        content: "\e909";
+        }
+        .icon-package:before {
+        content: "\e90a";
+        }
+        .icon-close:before {
+        content: "\e907";
+        }
+        .icon-down:before {
+        content: "\e900";
+        }
+        .icon-up:before {
+        content: "\e901";
+        }
+        .icon-right:before {
+        content: "\e902";
+        }
+        .icon-left:before {
+        content: "\e903";
+        }
+        .icon-bag:before {
+        content: "\e904";
+        }
+        .icon-lens:before {
+        content: "\e905";
+        }
+        .icon-user:before {
+        content: "\e906";
+        }
+    </style>
+</head>
+<body class="">
+    <div class="wrapper">
+        <nav class="navbar show-menu hide-vissible">
+            <div class="nav-block">
+                <div class="hamburger" id="hamburger-1">
+                    <div class="line-wrapper">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <span class="text">Menu</span>
+                    <span class="menu-close"></span>
+                </div>
+                <div class="menu-block">
+                    <menu class="menu-mini">
+                        <li><a href="#">
+                                <i class="icon-user"></i>
+                                <span class="text">Login</span>
+                            </a>
+                        </li>
+                        <li><a href="javascript:void(0)" class="search-btn"><i class="icon-lens"></i></a></li>
+                        <li><a href="#" data-target="cartDrawer" class="drawer-button"><i class="icon-bag"></i></a></li>
+                    </menu>
+                </div>
+
+                
+            </div>
+            
+            <menu class="category-menu">
+                <li class="btn-close-block">
+                    <span class="btn-close"><i class="icon-close"></i></span>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="text">Woman</span>
+                        <i class="icon-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="text">Man</span>
+                        <i class="icon-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="text">Lingerie</span>
+                        <i class="icon-right"></i>
+                    </a>
+                </li>
+            </menu>
+        </nav>
+        <main class="main">
+            <header class="main-header">
+                <div class="container-fluid">
+                    <a href="/" class="navbar-brand">
+                        <img src="/images/logo1.svg" alt="logo"/>
+                    </a>
+                </div>
+            </header>
+            <section class="inner-wrapper contact-wrapper"> 
+              <div class="container-fluid">
+                <div class="page-title-wrapper">
+                  <h2 class="page-title">CONTACT US</h2>
+                </div>
+                <form action="#" class="contact-form">
+                  <span class="required-label">Required fields *</span>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <select class="form-select" required>
+                        <option selected disabled>Title<sup class="required-start">*</sup></option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Transgender</option>
+                      </select>
+                      <div class="invalid-messsge">Please check your Title</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="firstName" placeholder="First Name">
+                      <label for="firstName" class="form-label">First Name<sup class="required-start">*</sup></label>
+                      <div class="invalid-messsge">Please check your First name</div>
+                    </div>
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="lastName" placeholder="Last Name">
+                      <label for="lastName" class="form-label">Last Name<sup class="required-start">*</sup></label>
+                      <div class="invalid-messsge">Please check your Last name</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" type="tel" id="phoneNumber" placeholder="Phone number">
+                      <label for="phoneNumber" class="form-label">Phone number<sup class="required-start">*</sup></label>
+                      <div class="invalid-messsge">Please check your Phone number</div>
+                    </div>
+                    <div class="input-group">
+                      <input class="form-control" type="email" id="email" placeholder="Email">
+                      <label for="email" class="form-label">Email<sup class="required-start">*</sup></label>
+                      <div class="invalid-messsge">Please check your Email</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <textarea class="form-control textarea-control" type="tel" id="phoneNumber" placeholder="Type your message here"></textarea>
+                      <label for="phoneNumber" class="form-label">Message<sup class="required-start">*</sup></label>
+                      <div class="invalid-messsge">Please check your Message</div>
+                    </div>
+                  </div>
+                  <div class="button-block">
+                    <button type="button" class="btn btn-primary btn-medium ml-auto">Send</button>
+                  </div>
+                </form>
+              </div>
+            </section>
+  
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="top-footer">
+                        <div class="box">
+                            <h4 class="title">News letter</h4>
+                            <input type="email" name="email" autocomplete="email" class="form-control newsletter" placeholder="Email" />
+                        </div>
+                        <div class="box">
+                            <h4 class="title">CUSTOMER SERVICE</h4>
+                            <p class="availability-info">Monday to Friday 9.30am - 5.30pm</p>
+                            <div class="button-block">
+                                <a class="btn btn-primary" href="#">Send us a message</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle-footer">
+                        <div  class="collapse-wrapper">
+                            <div class="collapse-item">
+                                <h4 class="collapse-title">ABOUT HUnny’s bunny <span class="plusminus"></span></h4>
+                                <menu class="collapse-panel footer-menu ">
+                                    <li><a href="#">Sales conditions</a></li>
+                                    <li><a href="#">Legal mentions</a></li>
+                                    <li><a href="#">Confidentiality</a></li>
+                                    <li><a href="#">Cookies Settings</a></li>
+                                </menu>
+                            </div>
+                            <div class="collapse-item">
+                                <h4 class="collapse-title">FOLLOW US <span class="plusminus"></span></h4>
+                                <menu class="collapse-panel footer-menu"> 
+                                    <li>
+                                        <a href="">
+                                            <i class="icon-instagram"></i>
+                                            <span class="link-text">Instagram</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-facebook"></i>
+                                            <span class="link-text">Facebook</span>
+                                        </a>
+                                    </li>
+                                </menu>
+                            </div>
+                        </div>
+                        
+                        <div class="box">
+                            <h4 class="title">DELIVERY COUNTRY/REGION</h4>
+                            <input type="email" class="form-control newsletter" name="Country" autocomplete="Country" disabled value="United Kingdom" placeholder="Country" />
+                            <div class="payment-logos-block">
+                                <img src="images/payment-logos.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-footer">
+                        <span class="copywrite">© HUNNY’S BUNNY 2024</span>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+
+
+
+
+
+
+    </div>
+    
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

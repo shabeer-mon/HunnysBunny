@@ -1,0 +1,124 @@
+.contact-wrapper{
+    margin: auto;
+    max-width: 800px;
+    margin-bottom: 100px;
+    .page-title-wrapper{
+        margin: 0 0 40px;
+        .page-title{
+            text-transform: uppercase;
+        }
+    }
+    .required-label{
+        font-size: 12px;
+        color: rgba($-primary, .6);
+        display: inline-block;
+        width: 100%;
+        
+        margin-bottom: 40px;
+    }
+    .contact-form{
+        .form-select{
+            width: calc(50% - 10px);
+            border: 0;
+            border-bottom: 1px solid $-primary;
+            padding: 10px 0;
+            color: rgba($-primary, .6);
+            &+.invalid-messsge{
+                width: calc(50% - 10px);
+            }
+        }
+    }
+    .form-group{
+        font-size: 13px;
+    }
+    .input-group{
+        position: relative;
+        flex: 1;
+        margin-bottom: 40px;
+        .invalid-messsge{
+            text-align: right;
+            font-size: 11px;
+            color: #c00;
+            transition: all .3s ease-in-out;
+            padding: 3px 0; 
+            position: absolute;
+            right: 0;
+            display: none;
+            top: 100%;
+        }
+    }
+
+    
+    .form-label{
+        position: absolute;
+        left: 0;
+        top: 5px;
+        transition: all .3s ease-in-out;
+        color: rgba($-primary, .6);
+        .required-start{
+            font-size: 8px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+    .form-control{
+        border: 0;
+        padding: 0;
+        border-bottom: 1px solid #000;
+        border-radius: 0;
+        background: transparent;
+        width: 100%;
+        max-width: inherit;
+        &::placeholder{
+            color: transparent;
+        }
+        &:focus, &:not(:placeholder-shown){
+            
+         & + .form-label{
+            top: -12px;
+            font-size: 12px;
+         }
+        }
+        &.textarea-control{
+            height: 130px;
+            border: 1px solid $-primary;
+            border-radius: 2px;
+            padding: 20px;
+            & + .form-label{
+                left: 20px;
+                top: 10px;
+             }
+             &:focus, &:not(:placeholder-shown){
+            
+                & + .form-label{
+                   top: -22px;
+                   left: 0;
+                }
+            }
+        }
+        &.is-invalid{
+            border-color: #c00;
+            &+.invalid-messsge{
+                display: block;
+            }
+        }
+    }
+}
+
+@include mq($from: tablet) {
+    .contact-wrapper .page-title-wrapper{
+        margin-bottom: 60px;
+    }
+    .contact-wrapper .form-group{
+        display: flex;
+        gap: 20px;
+        &:not(:last-child){
+            margin-bottom: 60px;
+        }
+    }
+    .contact-wrapper{
+        .input-group{
+            margin:0;
+        }
+    }
+}
