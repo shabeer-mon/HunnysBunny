@@ -82,7 +82,7 @@
         &.textarea-control{
             height: 130px;
             border: 1px solid $-primary;
-            border-radius: 2px;
+            border-radius: 4px;
             padding: 20px;
             & + .form-label{
                 left: 20px;
@@ -107,7 +107,7 @@
 
 @include mq($from: tablet) {
     .contact-wrapper .page-title-wrapper{
-        margin-bottom: 60px;
+        margin: 0 0 60px;
     }
     .contact-wrapper .form-group{
         display: flex;

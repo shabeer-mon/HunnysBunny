@@ -1,0 +1,25 @@
+.legal-pages{
+    margin: auto;
+    max-width: 1000px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    .page-title-wrapper{
+        margin: 0 0 40px;
+        .page-title{
+            text-transform: uppercase;
+        }
+    }
+    .page-discription{
+        font-size: 13px;
+        line-height: 25px;
+    }
+}
+
+@include mq($from: tablet) {
+    .legal-pages{
+        padding-bottom: 100px;
+    }
+    .legal-pages .page-title-wrapper{
+        margin: 0 0 60px;
+    }
+}
