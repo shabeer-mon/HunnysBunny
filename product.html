@@ -187,10 +187,10 @@
                         </div>
                         <div class="page-title-wrapper">
                             <span class="prod-label">New</span>
-                            <h2 class="prod-title">Silicone Rabbit Vibrator</h2>
+                            <h2 class="prod-title" data-name="Silicone Rabbit Vibrator">Silicone Rabbit Vibrator</h2>
                             <div class="price-block">
-                                <span class="price">£50.00</span>
-                                <span class="old-price">£70.00</span>
+                                <span class="price">£<span id="price"></span></span>
+                                <span class="old-price">£<span id="oldPrice"></span></span>
                             </div>
                         </div>
                         
@@ -221,9 +221,13 @@
                                 </div>
                                 <div class="attributes-card">
                                     <div class="card-header">
-                                        <div class="title">Size: <span id="selectedSize"></span></div>
+                                        <div class="title">Size: 
+                                            <span class="error-message" id="errorSize">Please select a size</span>
+                                            <span id="selectedSize"></span>
+                                        </div>
                                     </div>
                                     <div class="attributes-items color-card">
+                                        
                                         <div class="filter style-2">
                                             <div class="checkbox-group ">
                                                 <div class="checkbox-item not-available">
@@ -244,7 +248,7 @@
                                 </div>
                             </div>
                             <div class="button-block ">
-                                <button  id="addtocart" class="btn btn-primary btn-large m-auto " data-name="SILICONE RABBIT VIBRATOR" data-price="50" data-size="sizeOption" data-color="colorOption">
+                                <button  id="addtocart" class="btn btn-primary btn-large m-auto">
                                     <!-- data-target="cartDrawer" drawer-button -->
                                     Add to cart
                                     <span class="cart-item"></span>
@@ -312,7 +316,7 @@
                                                     </span>
                                                     <div class="content">
                                                         <div class="title">FAQ</div>
-                                                        <div>Looking for information? <span class="link">FAQ</span> </div>
+                                                        <div>Looking for information? <span class="link drawer-button" data-target="FAQ">FAQ</span> </div>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -669,13 +673,13 @@
                                     <img src="images/image-Black.png" alt="">
                                 </span>
                                 <div class="content">
-                                    <h2 class="title">Silicone Rabbit Vibrator</h2>
+                                    <h2 class="title"></h2>
                                     <div class="info">
-                                        <div>Color: Black</div>
-                                        <div>Size: 36</div>
-                                        <div>Quantity: 1</div>
+                                        <div>Color: <span class="color"></span></div>
+                                        <div>Size: <span class="size"></span></div>
+                                        <div>Quantity: <span class="qty"></span></div>
                                     </div>
-                                    <div class="price">£50.00</div>
+                                    <div class="price">£<span class="qtyPrice"></span></div>
                                 </div>
                             </div>
                         </div>
@@ -742,24 +746,24 @@
                     <div class="data-load">
                        <ol>
                         <li>
-                            <span class="title">How do I place an order?</span>
+                            <h4 class="title">How do I place an order?</h4>
                             <p>To place an order, simply browse our website, select the desired items, and add them to your cart. Once you've finished shopping, proceed to checkout, where you'll provide your shipping and payment information.</p>
                         </li>
                         <li>
-                            <span class="title">What payment methods do you accept?</span>
-                            <p></p>
+                            <h4 class="title">What payment methods do you accept?</h4>
+                            <p>We accept various payment methods, including credit/debit cards (Visa, Mastercard, American Express), PayPal, and bank transfers. All transactions are securely processed to ensure the safety of your financial information.</p>
                         </li>
                         <li>
-                            <span class="title"></span>
-                            <p></p>
+                            <h4 class="title">How can I track my order?</h4>
+                            <p>After placing your order, you'll receive a confirmation email with a tracking number and a link to track your package. You can also log in to your account on our website to view the status of your order and track its delivery progress.</p>
                         </li>
                         <li>
-                            <span class="title"></span>
-                            <p></p>
+                            <h4 class="title">What is your return policy?</h4>
+                            <p>We offer a hassle-free return policy. If you're not satisfied with your purchase for any reason, you can return it within [number of days] days of delivery for a full refund or exchange. Please refer to our Returns & Exchanges page for detailed instructions on how to initiate a return.</p>
                         </li>
                         <li>
-                            <span class="title"></span>
-                            <p></p>
+                            <h4 class="title">How can I contact customer support?</h4>
+                            <p>If you have any questions, concerns, or need assistance, our customer support team is here to help. You can reach us via email at <a href="#" class="link">support@example.com</a>  or by phone at [phone number]. Our dedicated support team will respond to your inquiries promptly and provide you with the assistance you need.</p>
                         </li>
                        </ol>
                     </div>
@@ -791,6 +795,7 @@
     </script>
        <script src="js/cart.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/product.js"></script>
  
 
 </body>
