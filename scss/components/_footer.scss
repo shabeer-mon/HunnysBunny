@@ -1,4 +1,5 @@
 .footer{
+    margin-top: 60px;
     .container-fluid{
         // display: flex;
         // flex-direction: column;
@@ -109,5 +110,10 @@
                 display: block !important;
             }
         }
+    }
+}
+@include mq($from: tablet) {
+    .footer{
+        margin-top: 100px;
     }
 }

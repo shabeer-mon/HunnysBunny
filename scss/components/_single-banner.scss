@@ -1,5 +1,4 @@
 .single-banner{
-    padding-bottom: 60px;
     .single-banner-wrapper{
         overflow: hidden;
         border-radius: 15px;
@@ -71,7 +70,6 @@
 
 @include mq($from: tablet) {
     .single-banner{
-        padding-bottom: 100px;
         .single-banner-wrapper{
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }

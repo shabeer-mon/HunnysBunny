@@ -1,5 +1,5 @@
 .category{
-    padding: 60px 0 60px;
+    padding: 60px 0 0;
     .category-block{
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -74,7 +74,7 @@
 
 @include mq($from: tablet) {
     .category{
-        padding: 100px 0;
+        padding: 100px 0 0;
         .category-block{
             .category-item{
                 .content{

@@ -8,6 +8,7 @@ body{
    height: 100%;
    font-family: "Open Sans", sans-serif;
    overflow-x: hidden !important;
+   font-size: 14px;
    &.search-active{
     overflow: hidden;
    }
@@ -166,8 +167,11 @@ body{
             margin-top: 2px;
         }
     }
+    .welcome-text{
+        text-transform: uppercase;
+    }
     @include mq($from: tablet) {
-            margin: -70px 0 60px;
+            margin: 0px 0 60px;
             .page-title{
                 font-size: 26px;
                 .items-quantity{

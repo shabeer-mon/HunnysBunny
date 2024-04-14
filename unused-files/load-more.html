@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Cards</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .product-card {
+  display: none;
+  width: 200px;
+  height: 150px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+}
+
+#loadMoreBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#loadMoreBtn:hover {
+  background-color: #0056b3;
+}
+
+</style>
+</head>
+<body>
+<div class="category-wrapper">
+  <div class="product-cards prod-list">
+    <div class="product-card prod-list-item">Product 1</div>
+    <div class="product-card prod-list-item">Product 2</div>
+    <div class="product-card prod-list-item">Product 3</div>
+    <div class="product-card prod-list-item">Product 4</div>
+    <div class="product-card prod-list-item">Product 5</div>
+    <div class="product-card prod-list-item">Product 6</div>
+    <div class="product-card prod-list-item">Product 7</div>
+    <div class="product-card prod-list-item">Product 8</div>
+    <div class="product-card prod-list-item">Product 9</div>
+    <div class="product-card prod-list-item">Product 10</div>
+    <div class="product-card prod-list-item">Product 11</div>
+    <div class="product-card prod-list-item">Product 12</div>
+    <div class="product-card prod-list-item">Product 13</div>
+  </div>
+</div>
+<button id="loadMoreButton">Load More</button>
+<button id="showAllButton">Show All</button>
+<div id="productCounter"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+<script>
+  $(document).ready(function() {
+    var totalProducts = $('.product-card').length;
+  var productsToShow = 4;
+  var productsShown = productsToShow;
+
+  updateCounter();
+
+  $('.product-card:lt(' + productsToShow + ')').show();
+
+  $('#loadMoreButton').click(function() {
+    productsToShow += 4;
+    productsShown = Math.min(productsToShow, totalProducts);
+    $('.product-card:lt(' + productsToShow + ')').show();
+    updateCounter();
+    if (productsShown === totalProducts) {
+      $(this).hide();
+    }
+  });
+
+  $('#showAllButton').click(function() {
+    $('.product-card').show();
+    updateCounter();
+    $(this).hide();
+    $('#loadMoreButton').hide();
+  });
+
+  function updateCounter() {
+    $('#productCounter').text(productsShown + ' / ' + totalProducts);
+  }
+});
+
+</script>
+</body>
+</html>

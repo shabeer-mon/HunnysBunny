@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#1D2129">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#1D2129">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hunnys Bunny</title>
+    <style>
+        @font-face {
+        font-family: 'hunnybunny-icon';
+        src:  url('fonts/hunnybunny-icon.eot');
+        src:  url('fonts/hunnybunny-icon.eot') format('embedded-opentype'),
+            url('fonts/hunnybunny-icon.ttf') format('truetype'),
+            url('fonts/hunnybunny-icon.woff') format('woff'),
+            url('fonts/hunnybunny-icon.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+        }
+
+        [class^="icon-"], [class*=" icon-"] {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'hunnybunny-icon' !important;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        }
+        .icon-van:before {
+        content: "\e90e";
+        }
+        .icon-card:before {
+        content: "\e90f";
+        }
+        .icon-filter:before {
+        content: "\e90d";
+        }
+        .icon-facebook:before {
+        content: "\e90b";
+        }
+        .icon-instagram:before {
+        content: "\e90c";
+        }
+        .icon-shipping:before {
+        content: "\e908";
+        }
+        .icon-return:before {
+        content: "\e909";
+        }
+        .icon-package:before {
+        content: "\e90a";
+        }
+        .icon-close:before {
+        content: "\e907";
+        }
+        .icon-down:before {
+        content: "\e900";
+        }
+        .icon-up:before {
+        content: "\e901";
+        }
+        .icon-right:before {
+        content: "\e902";
+        }
+        .icon-left:before {
+        content: "\e903";
+        }
+        .icon-bag:before {
+        content: "\e904";
+        }
+        .icon-lens:before {
+        content: "\e905";
+        }
+        .icon-user:before {
+        content: "\e906";
+        }
+    </style>
+</head>
+<body class="">
+    <div class="wrapper">
+        <main class="main">
+            <section class="inner-wrapper"> 
+                <div class="product-wrapper">
+                    <div class="container-fluid">
+                        <div class="swiper-slider-wrapper">
+                            
+                            <div class="prod-list swiper-slider">
+                                <div class="prod-list-item">
+                                    <div class="inner-box">
+                                        <div class="img-box">
+                                            <img src="images/product-image-1.png" class="productImage" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prod-list-item">
+                                    <div class="inner-box">
+                                        <div class="img-box">
+                                            <img src="images/product-image-2.png" class="productImage" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-block">
+                                <div class="swiper__counter"></div>
+                                <div class="swiper-slider__arrows"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="page-title-wrapper">
+                            <span class="prod-label">New</span>
+                            <h2 class="prod-title">Silicone Rabbit Vibrator</h2>
+                            <div class="price-block">
+                                <span class="price">£50.00</span>
+                                <span class="old-price">£70.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="content-blcok">
+                            <div class="attributes-block">
+                                <div class="attributes-card">
+                                    <div class="card-header">
+                                        <div class="title">Color: <span id="selectedColor"></span></div>
+                                    </div>
+                                    <div class="attributes-items color-card">
+                                        <div class="filter style-2">
+                                            <div class="checkbox-group">
+                                                <div class="checkbox-item">
+                                                    <input type="radio" value="Black" class="category-checkbox" id="colorBlack" name="color" checked>
+                                                    <label for="colorBlack">Black</label>
+                                                </div>
+                                            </div>
+                                            <div class="checkbox-group">
+                                                <div class="checkbox-item">
+                                                    <input type="radio" value="Pink" class="category-checkbox" id="colorPink" name="color">
+                                                    <label for="colorPink">Pink</label>
+                                                </div>
+                                            </div>
+                                            <div class="checkbox-group">
+                                                <div class="checkbox-item">
+                                                    <input type="radio" value="Red" class="category-checkbox" id="colorRed" name="color">
+                                                    <label for="colorRed">Red</label>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attributes-card">
+                                    <div class="card-header">
+                                        <div class="title">Size: <span id="selectedSize"></span></div>
+                                    </div>
+                                    <div class="attributes-items color-card">
+                                        <div class="filter style-2">
+                                            <div class="checkbox-group ">
+                                                <div class="checkbox-item not-available">
+                                                    <input type="radio" value="34" class="category-checkbox" id="34" name="size">
+                                                    <label for="34">34</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input type="radio" value="36" class="category-checkbox" id="36" name="size">
+                                                    <label for="36">36</label>
+                                                </div>
+                                                <div class="checkbox-item">
+                                                    <input type="radio" value="37" class="category-checkbox" id="37" name="size">
+                                                    <label for="37">37</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-block ">
+                                <button data-target="cartDrawer" class="add-to-cart btn btn-primary btn-large m-auto drawer-button" data-name="SILICONE RABBIT VIBRATOR" data-price="50" data-size="36" data-color="red">Add to cart</button>
+                                
+                                <a href="#" data-target="cartDrawer" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary drawer-button">Add to cart</a>
+                            </div>
+                 
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+  <!-- Nav -->
+  <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">
+          Cart (<span class="total-count"></span>)
+        </button>
+        <button class="clear-cart btn btn-danger">Clear Cart</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Main -->
+  <div class="container">
+    <div class="row " style="display: flex;">
+      <div class="col">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="http://www.azspagirls.com/files/2010/09/orange.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Orange</h4>
+            <p class="card-text">Price: $0.5</p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+        <div class="modal drawer cart-drawer" id="cartDrawer">
+            <div class="drawer-block">
+                <div class="drawer-header">
+                    <h3 class="title">BAG (0)</h3>
+                    <span class="btn-close close">
+                        <i class="icon-close"></i>
+                    </span>
+                </div>
+                <div class="drawer-inner">
+                    <div class="cart-block">
+                        <!-- <div class="empty">
+                            <h2 class="title">You bag is empty</h2>
+                            <div class="button-block">
+                                <a class="btn btn-primary btn-large" href="#">continue shopping</a>
+                            </div>
+                        </div> -->
+                        <div class="cart-list">
+                            <div class="list">
+                                <span class="icon-block">
+                                    <img src="images/image-Black.png" alt="">
+                                </span>
+                                <div class="content">
+                                    <h2 class="title">Silicone Rabbit Vibrator</h2>
+                                    <div class="info">
+                                        <div>Color: Black</div>
+                                        <div>Size: 36</div>
+                                        <div>Quantity: 1</div>
+                                    </div>
+                                    <div class="price">£50.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <table class="show-cart table">
+    
+                        </table>
+                        <div>Total price: $<span class="total-cart"></span></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+      
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+ 
+
+</body>
+</html>

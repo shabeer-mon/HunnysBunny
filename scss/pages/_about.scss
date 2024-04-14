@@ -1,0 +1,62 @@
+.about-pages{
+    .single-banner{
+        text-align: center;
+       letter-spacing: 2px;
+       .content{
+        max-width: 700px;
+        margin-left: auto;
+       }
+        .welcome-text{
+            text-transform: uppercase;
+            font-size:12px ;
+            display: block;
+            text-shadow: 0px 8px 6px rgba($-primary, 1);
+            margin-bottom: 10px;
+        }
+        .title{
+            text-align: center;
+            margin: auto;
+            justify-content: center;
+            font-weight: 100;
+            font-size: 24px;
+            text-transform: inherit;
+           
+            text-shadow: 0px 8px 6px rgba($-primary, 1);
+        }
+    }
+    .about-content{
+        .section-title{
+            margin-bottom: 15px;
+        }
+        .section-discription{
+            text-align: center;
+            font-size: 14px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 26px;
+        }
+    }
+    .vission{
+        max-width: 1000px;
+        margin: auto;
+        .section-title{
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@include mq($from: tablet) {
+    .about-pages{
+        .single-banner{
+            .title{
+                font-size: 40px;
+                line-height: 50px;
+            }
+            .welcome-text{
+                font-size: 14px;
+            }
+        }
+    }
+}
