@@ -25,6 +25,24 @@ $(document).ready(function () {
     $("body").addClass("search-active");
   });
 
+  //  Menu and Sub menu
+  $(".dropdown-toggle").click(function () {
+    var dropdownItem = $(this).closest(".dropdown");
+    var dropdownContent = dropdownItem.find(".submenu");
+    // Toggle active class and slide up/down the content
+    dropdownItem.toggleClass("active");
+    dropdownContent.toggleClass("active");
+    $(".category-menu").toggleClass("dropdown-active");
+    // Close other accordion items if they are open
+    // $(".collapse-item").not(accordionItem).removeClass("active");
+    // $(".collapse-panel").not(accordionContent).slideUp();
+  });
+  $(".submenu-close").click(function () {
+    $(".dropdown").removeClass("active");
+    $(".submenu").removeClass("active");
+    $(".category-menu").removeClass("dropdown-active");
+  });
+
   // drawer
   $(".drawer-button").click(function () {
     var targetModalId = $(this).data("target");
