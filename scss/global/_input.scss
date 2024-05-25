@@ -1,11 +1,11 @@
 .form-control{
     background: $-white;
-    border-radius: 5px;
+    border-radius: 50px;
     font-size: 14px;
     border: 1px solid transparent;
     display: block;
     padding: 4px 12px;
-    min-height: 36px;
+    min-height: 48px;
     position: relative;
     z-index: 1;
     text-overflow: ellipsis;
@@ -15,3 +15,57 @@
         border-color: $-primary;
     }
 }
+
+
+
+
+.quantity {
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow:none;
+    width: fit-content;
+    margin:0 auto 20px;
+    border: 2px solid rgba($-primary, .6);
+  }
+  
+  .quantity button {
+    // background-color: rgba($-primary, .8);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    transition: background-color 0.2s;
+    background: $-white;
+    color: rgba($-primary, 1);
+  }
+  
+  .quantity button:hover {
+    background-color: rgba($-primary, .05);
+  }
+  
+  .input-box {
+    width: 40px;
+    text-align: center;
+    border: none;
+    padding: 8px 10px;
+    font-size: 16px;
+    outline: none;
+    margin: 0 -1px;
+    
+  }
+  
+  /* Hide the number input spin buttons */
+  .input-box::-webkit-inner-spin-button,
+  .input-box::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .input-box[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
