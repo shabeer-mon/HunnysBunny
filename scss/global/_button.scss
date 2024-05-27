@@ -34,9 +34,9 @@
         
     }
     &-primary{
-        background: rgba($-primary, .8);
+        background: rgba($-primary, 1);
         &:hover{
-            background: rgba($-primary, 1);
+            background: rgba($-primary, .8);
         }
         
     }
@@ -79,5 +79,8 @@
 }
 
 .checkout-button{
-    background: rgba($-primary, .8);
+    background: rgba($-primary, 1) !important;
+    max-width: 300px !important;
+    margin: auto !important;
+    border-radius: 30px !important;
 }

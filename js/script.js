@@ -25,8 +25,10 @@ $(document).ready(function () {
     $("body").addClass("search-active");
   });
 
-  //  Menu and Sub menu
-  $(".dropdown-toggle").click(function () {
+
+
+   //  Menu and Sub menu
+   $(".dropdown-toggle").click(function () {
     var dropdownItem = $(this).closest(".dropdown");
     var dropdownContent = dropdownItem.find(".submenu");
     // Toggle active class and slide up/down the content
@@ -78,18 +80,33 @@ $(document).ready(function () {
     } else {
       $("#filterSection").slideUp();
     }
+if(filterInputValue.length>2){
+    $.ajax({
+      url:'',
+      method:'POST',
+      data:{
+        serch_by_name:filterInputValue
+      },
+      success:function (res) {
+        // console.log(res);
+    $("#filterList").html(res);
 
-    // Filter items based on input value
-    $("#filterList .prod-list-item").each(function () {
-      var text = $(this).text().toLowerCase();
-      if (text.indexOf(filterInputValue) !== -1) {
-        $(this).show();
-        $(".no-data").hide();
-      } else {
-        $(this).hide();
-        $(".no-data").show();
       }
+
     });
+    // Filter items based on input value
+}
+
+    // $("#filterList .prod-list-item").each(function () {
+    //   var text = $(this).text().toLowerCase();
+    //   if (text.indexOf(filterInputValue) !== -1) {
+    //     $(this).show();
+    //     $(".no-data").hide();
+    //   } else {
+    //     $(this).hide();
+    //     $(".no-data").show();
+    //   }
+    // });
   });
 
   // filter drawer
@@ -97,6 +114,9 @@ $(document).ready(function () {
     $("body").addClass("overlay-active");
     $(".filter-drawer").addClass("active");
   });
+
+  
+
 
   //Drawer COLSER
   $(".drawer-close").click(function () {
@@ -234,9 +254,21 @@ $(document).ready(function () {
   }
   // load more  end
 
+// Login page functions
+$(".reg-link .link-item").click(function () {
+  $(".register-block").addClass("active");
+  $(".log-in-box").addClass("inactive");
+});
+
+$(".login-link .link-item").click(function () {
+  $(".register-block").removeClass("active");
+  $(".log-in-box").removeClass("inactive");
+});
+
+
   // Slick
   $(".hunnys-bunny-banner").slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
@@ -306,15 +338,9 @@ $(document).ready(function () {
     nextArrow:
       '<div class="swiper__arrow arrow-right"><i class="icon-right"></i></div>',
   });
-
-
-
-
-
-
-
+// Input number 
   (function () {
-    const quantityContainer = document.querySelector(".quantity");
+    const quantityContainer = document.querySelector(".quantityBtn");
     const minusBtn = quantityContainer.querySelector(".minus");
     const plusBtn = quantityContainer.querySelector(".plus");
     const inputBox = quantityContainer.querySelector(".input-box");
@@ -362,5 +388,4 @@ $(document).ready(function () {
       console.log("Quantity changed:", value);
     }
   })();
-  
 });

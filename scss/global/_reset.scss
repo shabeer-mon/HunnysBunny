@@ -14,7 +14,9 @@ body{
 input, textarea, button, select, a{
     -webkit-tap-highlight-color: transparent;
 }
-
+a{
+    color: $-primary;
+}
 a:focus, a:visited, a:active{
     outline: none;
 }

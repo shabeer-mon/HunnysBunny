@@ -1,6 +1,7 @@
+
 .form-control{
     background: $-white;
-    border-radius: 50px;
+    border-radius: 8px;
     font-size: 14px;
     border: 1px solid transparent;
     display: block;
@@ -14,47 +15,69 @@
     &:focus{
         border-color: $-primary;
     }
+    &.borderd{
+      border: 1px solid rgba($-primary, .6);
+    }
+    &-mini{
+      min-height: 40px;
+    }
+    
 }
+.woocommerce form label{
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.woocommerce-form-login  .form-control, .register .form-control{
+  background: #ffffff;
+
+}
+.show-password-input{
+ z-index: 2; 
+}
+// .woocommerce form.login{
+//   border: none !important;
+//   padding: 0 !important;
+// }
 
 
-
-
-.quantity {
+.quantityBtn {
     display: flex;
-    border-radius: 30px;
+    border-radius:8px;
     overflow: hidden;
     box-shadow:none;
     width: fit-content;
     margin:0 auto 20px;
-    border: 2px solid rgba($-primary, .6);
+    border: 1px solid rgba($-primary, .6);
   }
   
-  .quantity button {
+  .quantityBtn button {
     // background-color: rgba($-primary, .8);
     color: #fff;
     border: none;
     cursor: pointer;
     font-size: 20px;
     width: 50px;
-    height: 40px;
+    height: 48px;
     text-align: center;
     transition: background-color 0.2s;
     background: $-white;
     color: rgba($-primary, 1);
   }
   
-  .quantity button:hover {
+  .quantityBtn button:hover {
     background-color: rgba($-primary, .05);
   }
   
   .input-box {
-    width: 40px;
+    width: 50px;
     text-align: center;
     border: none;
     padding: 8px 10px;
     font-size: 16px;
     outline: none;
-    margin: 0 -1px;
+    margin: 0 0px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
     
   }
   
