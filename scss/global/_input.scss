@@ -23,8 +23,11 @@
     }
     
 }
+.form-group{
+  margin-bottom: 30px;
+}
 .woocommerce form label{
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   display: inline-block;
 }
 .woocommerce-form-login  .form-control, .register .form-control{
@@ -41,7 +44,7 @@
 
 
 .quantityBtn {
-    display: flex;
+    display: flex ;
     border-radius:8px;
     overflow: hidden;
     box-shadow:none;
@@ -69,15 +72,15 @@
   }
   
   .input-box {
-    width: 50px;
-    text-align: center;
-    border: none;
-    padding: 8px 10px;
-    font-size: 16px;
-    outline: none;
-    margin: 0 0px;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
+    width: 50px !important;
+    text-align: center !important;
+    border: none !important;
+    padding: 8px 10px !important;
+    font-size: 16px !important;
+    outline: none !important;
+    margin: 0 0px !important;
+    border-left: 1px solid #000 !important;
+    border-right: 1px solid #000 !important;
     
   }
   

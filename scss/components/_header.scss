@@ -8,6 +8,9 @@
         img{
             max-width: 200px;
         }
+        & + a{
+            display: none;
+        }
     }
     @include mq($from: tablet) {
         text-align: right;

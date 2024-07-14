@@ -20,3 +20,14 @@ a{
 a:focus, a:visited, a:active{
     outline: none;
 }
+
+.orderby {
+-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../images/select-arrow.svg) 95% / 18px no-repeat transparent;
+  }
+
+// ol { counter-reset: item }
+// li{ display: block }
+// li:before { content: counters(item, ".") " "; counter-increment: item }

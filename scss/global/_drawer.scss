@@ -58,7 +58,30 @@
         }
     }
 }
-
+.filter-drawer{
+    .drawer-button-block{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .btn{
+            margin: auto;
+            & + .btn{
+                margin-top: 10px;
+            }
+        }
+    }
+    .woocommerce-ordering{
+        padding:15px 0;
+        .orderby{
+            border-width: 2px;
+            border-radius: 50px;
+        }
+    }
+    .collapse-panel, .collapse-title{
+        border: none !important;
+    }
+}
 // @include mq($from: tablet) {
 //     .drawer .drawer-block .drawer-header{
 //         padding: 15px;

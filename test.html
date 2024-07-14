@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Popover</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            position: relative;
+            padding: 20px;
+            background: #333;
+            color: white;
+            text-align: right;
+        }
+        .cart-icon {
+            cursor: pointer;
+        }
+        .cart-popover {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            width: 300px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+        .cart-item-details {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        .buy-now-btn {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <span class="cart-icon">🛒</span>
+    <div class="cart-popover" id="cartPopover">
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/50" alt="Item 1">
+            <div class="cart-item-details">
+                <p>Item 1</p>
+                <p>$10.00</p>
+            </div>
+        </div>
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/50" alt="Item 2">
+            <div class="cart-item-details">
+                <p>Item 2</p>
+                <p>$20.00</p>
+            </div>
+        </div>
+        <button class="buy-now-btn" onclick="buyNow()">Buy Now</button>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.cart-icon').addEventListener('click', function() {
+        const cartPopover = document.getElementById('cartPopover');
+        cartPopover.style.display = cartPopover.style.display === 'block' ? 'none' : 'block';
+    });
+
+    function buyNow() {
+        alert('Proceeding to checkout!');
+        // Add your checkout logic here
+    }
+</script>
+
+</body>
+</html>

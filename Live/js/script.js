@@ -12,7 +12,6 @@ $(document).ready(function () {
     window.setTimeout(function () {
       $(".navbar").toggleClass("show-menu");
     }, 800); //<-- Delay in milliseconds
-    $("body").toggleClass("overlayactive");
   });
   $(".navbar .btn-close").click(function () {
     $(".hamburger").removeClass("is-active");

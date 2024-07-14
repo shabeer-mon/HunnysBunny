@@ -25,6 +25,11 @@ body{
     z-index: 35;
     transition: all .3s ease-in-out;
    }
+   &.overlayactive {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    }
    &.overlay-active{
     overflow: hidden;
     &::before{
@@ -101,7 +106,9 @@ body{
     }
 }
 
-
+.woocommerce-breadcrumb{
+    display: none;
+}
 
 
 // Category page
@@ -189,4 +196,22 @@ body{
     overflow: hidden;
     margin: 1em auto 0;
 }
+.cky-btn-revisit-wrapper{
+    background: rgba($-primary, 1) !important;
+    @include mq($until: tablet) {
+        bottom: 85px !important;
+        left: 20px !important;
+    }
+}
+.wpcf7 form.sent .wpcf7-response-output{
+    border-color:rgba($-primary, 1) ;
+}
 
+
+.wc-block-components-notice-banner.is-success{
+    border-color:rgba($-primary, 1) !important;
+    background:rgba($-primary, 0) !important;;
+}
+.text-danger{
+    color: $-danger;
+}

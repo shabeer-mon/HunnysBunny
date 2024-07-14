@@ -63,9 +63,11 @@
         margin-bottom: 60px;
     }
     .prod-list{
+        
         .prod-list-item{
             .inner-box{
-                background: #5b5b5b;
+                color: $-primary;
+                background: #f5f5f5;
             }
         }
     }

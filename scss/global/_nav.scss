@@ -1,6 +1,8 @@
 .navbar{
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
     .nav-block{
       width: calc(100% - 40px);
       height: 50px;
@@ -87,6 +89,12 @@
           }
         }
       }
+    }
+    .category-menu-wrapper{
+      display: flex;
+      max-height:calc(100% - 120px);
+      height: 100%;
+      align-items: center;
     }
     .category-menu{
       position: fixed;
@@ -355,11 +363,13 @@
         margin: 25px 0;
         padding: 30px 20px;
         border-top:2px solid rgba($-primary, .1);
-        border-bottom:2px solid rgba($-primary, .1);
         list-style: none;
         display: flex;
         flex-direction: column;
         background: transparent;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
         .btn-close-block{
           display: none;
         }

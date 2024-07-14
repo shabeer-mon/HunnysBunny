@@ -106,17 +106,4 @@
     }
 }
 
-.filter-drawer{
-    .drawer-button-block{
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        .btn{
-            margin: auto;
-            & + .btn{
-                margin-top: 10px;
-            }
-        }
-    }
-}
+

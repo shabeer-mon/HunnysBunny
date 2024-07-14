@@ -1,0 +1,12 @@
+.wc-block-product-categories-list{
+    padding-left: 20px;
+    .wc-block-product-categories-list-item{
+        margin-bottom: 2px;
+        a{
+            text-decoration: none;
+            &:hover{
+                text-decoration:underline; 
+            }
+        }
+    }
+}

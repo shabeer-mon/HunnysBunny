@@ -1,4 +1,5 @@
 .banner-wrapper{
+    
     overflow: hidden;
     .container-fluid{
         height: 100%;
@@ -12,6 +13,7 @@
             height: 100%;
         }
         .slick-dots{
+            flex: 1;
             bottom: 30px;
             right: 40px;
             width: fit-content;
@@ -133,7 +135,45 @@
             }
         }
     }
+    .banner-block{
+        position: relative;
+        .banner-nav-block{
+            width: 100%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            .swiper-slider__arrows{
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                .swiper__arrow {
+                    background: $-primary;
+                    border-radius: 30px;
+                    color: $-white;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    cursor: pointer;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 10px;
+                    &.arrow-left{
+                        margin-right: 6px;
+                    }
+                }
+            }
+            .slider__dots{
+                display: none;
+            }
+        }
+    }
+    
+ 
 }
+
 
 
 @include mq($from: tablet) {

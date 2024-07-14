@@ -14,12 +14,14 @@
             .img-box{
                 display: inline-block;
                 width: 100%;
+               
                 img{
                     transition: all 0.3s ease-in-out;
                     display: block;
                     margin: auto;
                     max-width: 240px;
                     width: 100%;
+                    mix-blend-mode: multiply;
                 }
             }
             .offer-text{
@@ -61,15 +63,15 @@
             }
         }
        
-        &:hover{
-            .inner-box{
-                .img-box{
-                    img{
-                        transform: scale(1.1);
-                    }
-                }
-            }
-        }
+        // &:hover{
+        //     .inner-box{
+        //         .img-box{
+        //             img{
+        //                 transform: scale(1.1);
+        //             }
+        //         }
+        //     }
+        // }
     }
     &.prod-slider{
         display: block !important;

@@ -25,8 +25,10 @@ $(document).ready(function () {
     $("body").addClass("search-active");
   });
 
-  //  Menu and Sub menu
-  $(".dropdown-toggle").click(function () {
+
+
+   //  Menu and Sub menu
+   $(".dropdown-toggle").click(function () {
     var dropdownItem = $(this).closest(".dropdown");
     var dropdownContent = dropdownItem.find(".submenu");
     // Toggle active class and slide up/down the content
@@ -78,18 +80,33 @@ $(document).ready(function () {
     } else {
       $("#filterSection").slideUp();
     }
+if(filterInputValue.length>2){
+    $.ajax({
+      url:'',
+      method:'POST',
+      data:{
+        serch_by_name:filterInputValue
+      },
+      success:function (res) {
+        // console.log(res);
+    $("#filterList").html(res);
 
-    // Filter items based on input value
-    $("#filterList .prod-list-item").each(function () {
-      var text = $(this).text().toLowerCase();
-      if (text.indexOf(filterInputValue) !== -1) {
-        $(this).show();
-        $(".no-data").hide();
-      } else {
-        $(this).hide();
-        $(".no-data").show();
       }
+
     });
+    // Filter items based on input value
+}
+
+    // $("#filterList .prod-list-item").each(function () {
+    //   var text = $(this).text().toLowerCase();
+    //   if (text.indexOf(filterInputValue) !== -1) {
+    //     $(this).show();
+    //     $(".no-data").hide();
+    //   } else {
+    //     $(this).hide();
+    //     $(".no-data").show();
+    //   }
+    // });
   });
 
   // filter drawer
@@ -97,6 +114,9 @@ $(document).ready(function () {
     $("body").addClass("overlay-active");
     $(".filter-drawer").addClass("active");
   });
+
+  
+
 
   //Drawer COLSER
   $(".drawer-close").click(function () {
@@ -234,9 +254,21 @@ $(document).ready(function () {
   }
   // load more  end
 
+// Login page functions
+$(".reg-link .link-item").click(function () {
+  $(".register-block").addClass("active");
+  $(".log-in-box").addClass("inactive");
+});
+
+$(".login-link .link-item").click(function () {
+  $(".register-block").removeClass("active");
+  $(".log-in-box").removeClass("inactive");
+});
+
+
   // Slick
   $(".hunnys-bunny-banner").slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
@@ -306,61 +338,66 @@ $(document).ready(function () {
     nextArrow:
       '<div class="swiper__arrow arrow-right"><i class="icon-right"></i></div>',
   });
-
-
-
-
-
-
-
-  (function () {
-    const quantityContainer = document.querySelector(".quantity");
-    const minusBtn = quantityContainer.querySelector(".minus");
-    const plusBtn = quantityContainer.querySelector(".plus");
-    const inputBox = quantityContainer.querySelector(".input-box");
+// Input number 
+  // (function () {
+  //   const quantityContainer = document.querySelector(".quantityBtn");
+  //   const minusBtn = quantityContainer.querySelector(".minus");
+  //   const plusBtn = quantityContainer.querySelector(".plus");
+  //   const inputBox = quantityContainer.querySelector(".input-box");
   
-    updateButtonStates();
+  //   updateButtonStates();
   
-    quantityContainer.addEventListener("click", handleButtonClick);
-    inputBox.addEventListener("input", handleQuantityChange);
+  //   quantityContainer.addEventListener("click", handleButtonClick);
+  //   // inputBox.addEventListener("input", handleQuantityChange);
   
-    function updateButtonStates() {
-      const value = parseInt(inputBox.value);
-      minusBtn.disabled = value <= 1;
-      plusBtn.disabled = value >= parseInt(inputBox.max);
-    }
+  //   function updateButtonStates() {
+  //     const value = parseInt(inputBox.value);
+  //     minusBtn.disabled = value <= 1;
+  //     plusBtn.disabled = value >= parseInt(inputBox.max);
+  //   }
   
-    function handleButtonClick(event) {
-      if (event.target.classList.contains("minus")) {
-        decreaseValue();
-      } else if (event.target.classList.contains("plus")) {
-        increaseValue();
-      }
-    }
+  //   function handleButtonClick(event) {
+  //     if (event.target.classList.contains("minus")) {
+  //       decreaseValue();
+  //     } else if (event.target.classList.contains("plus")) {
+  //       increaseValue();
+  //     }
+  //   }
   
-    function decreaseValue() {
-      let value = parseInt(inputBox.value);
-      value = isNaN(value) ? 1 : Math.max(value - 1, 1);
-      inputBox.value = value;
-      updateButtonStates();
-      handleQuantityChange();
-    }
+  //   // function decreaseValue() {
+  //   //   let value = parseInt(inputBox.value);
+  //   //   value = isNaN(value) ? 1 : Math.max(value - 1, 1);
+  //   //   inputBox.value = value;
+  //   //   updateButtonStates();
+  //   //   handleQuantityChange();
+  //   // }
   
-    function increaseValue() {
-      let value = parseInt(inputBox.value);
-      value = isNaN(value) ? 1 : Math.min(value + 1, parseInt(inputBox.max));
-      inputBox.value = value;
-      updateButtonStates();
-      handleQuantityChange();
-    }
+  //   // function increaseValue() {
+  //   //   let value = parseInt(inputBox.value);
+  //   //   value = isNaN(value) ? 1 : Math.min(value + 1, parseInt(inputBox.max));
+  //   //   inputBox.value = value;
+  //   //   updateButtonStates();
+  //   //   handleQuantityChange();
+  //   // }
   
-    function handleQuantityChange() {
-      let value = parseInt(inputBox.value);
-      value = isNaN(value) ? 1 : value;
+  //   // function handleQuantityChange() {
+  //   //   let value = parseInt(inputBox.value);
+  //   //   value = isNaN(value) ? 1 : value;
   
-      // Execute your code here based on the updated quantity value
-      console.log("Quantity changed:", value);
-    }
-  })();
-  
+  //   //   // Execute your code here based on the updated quantity value
+  //   //   console.log("Quantity changed:", value);
+  //   // }
+  // })();
+  $(document).on('click','.minus',function(){
+    let m = $('.input-qty-box').val();
+        if(m>1){
+            $('.input-qty-box').val(Number(m)-1);
+        }
+    });
+  $(document).on('click','.plus',function(){
+    let m = $('.input-qty-box').val();
+        if(m<10){
+            $('.input-qty-box').val(Number(m)+1);
+        }
+    });
 });

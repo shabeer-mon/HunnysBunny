@@ -1,0 +1,23 @@
+.entry-content {
+    padding: 0px 30px;
+}
+
+.woocommerce .woocommerce-ordering {
+    width: 100% !important;
+}
+
+.woocommerce .woocommerce-ordering select {
+    width: 100%;
+    padding: 8px;
+    /* margin-bottom: 12px; */
+}
+.collapse-panel {
+    min-height: 50px;
+}
+
+/* input.qty {
+    width: 51% !important;
+    margin: 0px 24% 10px;
+    padding: 2px 0px;
+    font-size: 20px;
+} */
