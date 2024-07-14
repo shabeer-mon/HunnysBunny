@@ -1,0 +1,114 @@
+
+
+.email-wrapper{
+    font-family: "Open Sans", sans-serif ;
+    font-size: 13px;
+    .text-center{
+        text-align: center;
+    }
+    .email-container{
+        border: 1px solid #dcdcdc;  
+       
+        .header{
+            // background: #000000;
+            // text-align: center;
+            // padding: 15px 0;
+            margin-bottom: 30px;
+            img{
+                margin: auto;
+                width: 300px;
+            }
+        }
+        .content{
+            max-width: 500px;
+            margin: auto;
+           
+            .title{
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin:0 auto 30px;
+                max-width: 400px;
+            }
+            .email-link{
+                font-weight: 700;
+                text-decoration: none;
+                color: black;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .order-details-wrapper{
+            margin-top: 30px;
+            padding: 20px 0;
+            border-top:1px solid #dcdcdc;
+            border-bottom:1px solid #dcdcdc;
+        }
+        .order-details{
+            vertical-align: text-top;
+            tr{
+                td{
+                    vertical-align: top;
+                    padding: 5px;
+                    &:last-child{
+                        text-align: right;
+                    }
+                    &:not(:first-child){
+                        padding: 15px 10px;
+                    }
+                }
+            }
+            .image-box{
+                width: 60px;
+                height: 60px;
+                background: #f5f5f5;
+                border-radius: 3px;
+                border: 1px solid #dcdcdc;
+                img{
+                    width: 60px;
+                    height: auto;
+                    mix-blend-mode: multiply;
+                }
+
+            }
+            .product-name, .product-price{
+                font-weight: 600;
+                margin-bottom: 3px;
+            }
+            .product-qty{
+                font-size: 12px;
+                color: #6d6d6d;
+            }
+            .name{
+                width: 100%;
+            }
+        }
+        .sub-total-table{
+            margin: 10px 0;
+            border-spacing: 0px;
+            th{
+                width: 100%;
+                text-align: left;
+                padding: 5px;
+                font-weight: 600;
+            }
+            td{
+                width: 80px;
+                padding: 5px;
+                font-weight: 600;
+                text-align: right;
+            }
+           
+        }
+        .total-table{
+            border-top: 1px solid #dcdcdc;  
+            td{
+                font-weight: 700;
+                padding:10px 5px;
+            }
+        }
+    }
+    max-width: 600px;
+    margin: auto;
+}
